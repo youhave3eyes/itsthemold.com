@@ -897,6 +897,53 @@ body{font-size:17px}
 .tag{border-radius:10px 6px 12px 7px;font-size:1rem;padding:2px 9px}
 .menu a{font-size:1.15rem}
 .ch-num{font-family:var(--f-mono);font-size:clamp(3.2rem,7vw,5rem);font-weight:700}
+
+/* ===== experts + references ===== */
+.experts,.sources{padding-block:clamp(56px,8vw,100px)}
+.sources{padding-top:0}
+.experts h2,.sources h2{font-size:clamp(2.4rem,6vw,4.6rem);font-weight:700;font-variation-settings:"wdth" 82;line-height:.92;letter-spacing:-.035em;margin-top:10px}
+.experts h2 em.s{color:var(--mold);background-repeat:no-repeat;background-position:0 96%;background-size:100% .16em;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 40 4, 80 12, 120 7 S 200 3, 240 8 S 285 10, 297 5' fill='none' stroke='%23a6d94f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E")}
+.ex-lead{margin-top:16px;font-size:1.12rem;color:var(--text2);max-width:58ch}
+.vgrid{margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vcard{padding:12px 12px 20px;display:grid;gap:14px;align-content:start}
+.vcard:nth-child(3n+1){transform:rotate(-.5deg)}.vcard:nth-child(3n+2){transform:rotate(.4deg) translateY(6px)}
+.vthumb{all:unset;cursor:pointer;position:relative;display:block;border-radius:14px 10px 16px 12px;overflow:hidden;aspect-ratio:16/9;max-width:100%;background:var(--deep) radial-gradient(circle at 30% 40%,rgba(166,217,79,.25),transparent 50%)}
+.vthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s,filter .4s;filter:saturate(.9)}
+.vthumb:hover img{transform:scale(1.04);filter:saturate(1.1)}
+.vthumb:focus-visible{outline:3px solid var(--mold);outline-offset:3px}
+.vplay{position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;display:grid;place-items:center;background:var(--mold);color:var(--void);box-shadow:0 0 0 8px rgba(166,217,79,.25),0 8px 24px rgba(0,0,0,.5);transition:transform .25s}
+.vplay svg{width:28px;height:28px;margin-left:3px}
+.vthumb:hover .vplay{transform:scale(1.1)}
+.vbody{display:grid;gap:4px;padding:0 6px}
+.vwho{font-family:var(--f-mono);font-size:1.5rem;line-height:1.05;color:var(--mold)}
+.vrole{font-size:.85rem;color:var(--muted)}
+.vcard h4{font-size:1.15rem;font-weight:600;line-height:1.2;margin-top:6px}
+.vsum{font-size:.92rem;color:var(--text2)}
+.vlink{margin-top:8px;font-size:.88rem;color:var(--cyan);text-decoration:none}
+.vlink:hover{text-decoration:underline}
+.ex-note{margin-top:22px;font-size:.88rem;color:var(--muted);max-width:80ch}
+.ref-play{all:unset;cursor:pointer;margin-left:auto;padding:9px 16px;border-radius:20px 14px 22px 16px;background:var(--mold);color:var(--void);font-weight:600;font-size:.9rem}
+.ref-play:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.srcgrid{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.src{padding:24px;display:grid;gap:12px;align-content:start}
+.src h4{font-family:var(--f-mono);font-size:1.6rem;font-weight:700;color:var(--mold);line-height:1}
+.src ul{margin:0;padding-left:1.1em;display:grid;gap:9px}
+.src li{font-size:.94rem;color:var(--text2)}
+.src a{color:var(--ink);text-decoration-color:rgba(166,217,79,.5);text-underline-offset:3px}
+.src a:hover{color:var(--mold)}
+.src .books{list-style:none;padding:0}
+.src .books b{color:var(--ink)}
+.vmodal{position:fixed;inset:0;z-index:200;background:rgba(5,9,6,.86);display:grid;place-items:center;padding:20px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px));backdrop-filter:blur(6px)}
+.vmodal[hidden]{display:none!important}
+.vm-box{width:min(960px,100%);display:grid;gap:10px}
+.vm-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.vm-top p{font-family:var(--f-mono);font-size:1.5rem;color:var(--mold);line-height:1.1}
+.vm-x{all:unset;cursor:pointer;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--panel);color:var(--ink);border:1px solid var(--line-2);font-size:1.1rem;flex:none}
+.vm-x:focus-visible{outline:2px solid var(--mold)}
+.vm-frame{position:relative;aspect-ratio:16/9;width:100%;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.vm-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (max-width:980px){.vgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.vgrid,.srcgrid{grid-template-columns:1fr}.vcard{transform:none!important}.ref-play{margin-left:0}}
 </style>
 </head>
 <body>
@@ -914,7 +961,7 @@ body{font-size:17px}
       <path d="M14 18 A18 18 0 0 1 24 12.6" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.6" stroke-linecap="round"/>
       <text x="58" y="41" font-size="34" font-weight="800" letter-spacing="-1.2" fill="#e6f0e2">its<tspan font-family="Instrument Serif, Georgia, serif" font-style="italic" font-weight="400" fill="#a6d94f" font-size="38" dx="2" letter-spacing="0">the</tspan><tspan dx="2">mold</tspan></text>
     </svg></a>
-    <nav class="menu" id="menu" aria-label="Site"><ul id="menu-list"><li><a href="#top">Start</a></li><li><a href="#invisible">The toxin</a></li><li><a href="#sick">How it gets in</a></li><li><a href="#brain">Brain</a></li><li><a href="#toxins">Molds</a></li><li><a href="#hides">Where it hides</a></li><li><a href="#fix">Solutions</a></li><li><a href="#body">Your body</a></li></ul></nav>
+    <nav class="menu" id="menu" aria-label="Site"><ul id="menu-list"><li><a href="#top">Start</a></li><li><a href="#invisible">The toxin</a></li><li><a href="#sick">How it gets in</a></li><li><a href="#brain">Brain</a></li><li><a href="#toxins">Molds</a></li><li><a href="#hides">Where it hides</a></li><li><a href="#fix">Solutions</a></li><li><a href="#body">Your body</a></li><li><a href="#experts">Experts</a></li><li><a href="#sources">Sources</a></li></ul></nav>
   </div>
   <div class="progress" id="progress"></div>
 </header>
@@ -1690,6 +1737,7 @@ body{font-size:17px}
     <div class="ref panel">
       <span class="mono">Reference</span>
       <span>The kill-then-neutralize approach, HOCl fogging and the use of ClO₂ for hard-to-reach spots follow the protocol published by <a href="https://www.randrmagonline.com/articles/90591-mycotoxin-control-as-a-critical-part-of-mold-remediation" target="_blank" rel="noopener">Superstratum Labs</a>.</span>
+      <button type="button" class="ref-play" data-yt="DRzQGKd4WrU" data-title="Superstratum whole-home system, step 1">▶ Watch their whole-home process</button>
     </div>
   </div>
 </section>
@@ -1740,6 +1788,150 @@ body{font-size:17px}
     </div>
   </div>
 </section>
+
+<div class="creep alt" aria-hidden="true"></div>
+<section class="experts" id="experts">
+  <div class="wrap">
+    <span class="note-h">don't just take our word for it</span>
+    <h2>Hear it from the <em class="s">experts.</em></h2>
+    <p class="ex-lead">Doctors and remediation pros who have spent years on mold and mycotoxins. Tap a video to watch it right here.</p>
+    <div class="vgrid">
+      <article class="vcard panel">
+        <button type="button" class="vthumb" data-yt="9p-o_lTZLKY" data-title="Sick buildings, mycotoxins and what you can do" aria-label="Play video: Sick buildings, mycotoxins and what you can do">
+          <img src="https://i.ytimg.com/vi/9p-o_lTZLKY/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="vbody">
+          <p class="vwho">Seth Jones</p>
+          <p class="vrole">Founder, Superstratum Labs</p>
+          <h4>Sick buildings, mycotoxins and what you can do</h4>
+          <p class="vsum">Why killing mold isn't enough, and how to break down the toxins it leaves in your home.</p>
+          <a class="vlink" href="https://www.youtube.com/watch?v=9p-o_lTZLKY" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </article>
+      <article class="vcard panel">
+        <button type="button" class="vthumb" data-yt="sr8sSagAWTM" data-title="Mold testing, binders and the future of mold medicine" aria-label="Play video: Mold testing, binders and the future of mold medicine">
+          <img src="https://i.ytimg.com/vi/sr8sSagAWTM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="vbody">
+          <p class="vwho">Dr. Ritchie Shoemaker &amp; Dr. Scott McMahon</p>
+          <p class="vrole">Physicians, CIRS researchers</p>
+          <h4>Mold testing, binders and the future of mold medicine</h4>
+          <p class="vsum">The doctor who first described CIRS talks testing, binders and what's next.</p>
+          <a class="vlink" href="https://www.youtube.com/watch?v=sr8sSagAWTM" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </article>
+      <article class="vcard panel">
+        <button type="button" class="vthumb" data-yt="HWyUy86D2L8" data-title="The basics of mold &amp; mycotoxin treatment" aria-label="Play video: The basics of mold &amp; mycotoxin treatment">
+          <img src="https://i.ytimg.com/vi/HWyUy86D2L8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="vbody">
+          <p class="vwho">Dr. Neil Nathan</p>
+          <p class="vrole">MD, author of <i>Toxic</i></p>
+          <h4>The basics of mold &amp; mycotoxin treatment</h4>
+          <p class="vsum">A clear walk-through of how mold toxicity is treated, step by step.</p>
+          <a class="vlink" href="https://www.youtube.com/watch?v=HWyUy86D2L8" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </article>
+      <article class="vcard panel">
+        <button type="button" class="vthumb" data-yt="Mi0Hx4n79Lw" data-title="Mold toxicity, mold sickness and how to break the mold" aria-label="Play video: Mold toxicity, mold sickness and how to break the mold">
+          <img src="https://i.ytimg.com/vi/Mi0Hx4n79Lw/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="vbody">
+          <p class="vwho">Dr. Jill Crista</p>
+          <p class="vrole">ND, author of <i>Break the Mold</i></p>
+          <h4>Mold toxicity, mold sickness and how to break the mold</h4>
+          <p class="vsum">Signs of mold illness and the tools she uses to help people recover.</p>
+          <a class="vlink" href="https://www.youtube.com/watch?v=Mi0Hx4n79Lw" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </article>
+      <article class="vcard panel">
+        <button type="button" class="vthumb" data-yt="kD1qHLLRWec" data-title="Exposing mold with the Mold Medic" aria-label="Play video: Exposing mold with the Mold Medic">
+          <img src="https://i.ytimg.com/vi/kD1qHLLRWec/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="vbody">
+          <p class="vwho">Michael Rubino</p>
+          <p class="vrole">“The Mold Medic,” remediation expert</p>
+          <h4>Exposing mold with the Mold Medic</h4>
+          <p class="vsum">What most mold companies miss, and what a real cleanup looks like.</p>
+          <a class="vlink" href="https://www.youtube.com/watch?v=kD1qHLLRWec" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </article>
+      <article class="vcard panel">
+        <button type="button" class="vthumb" data-yt="LGG7om1hHcU" data-title="Worse than asbestos? The CIRS rabbit hole" aria-label="Play video: Worse than asbestos? The CIRS rabbit hole">
+          <img src="https://i.ytimg.com/vi/LGG7om1hHcU/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="vbody">
+          <p class="vwho">Jordan Peterson with Shoemaker &amp; McMahon</p>
+          <p class="vrole">The Jordan B. Peterson Podcast</p>
+          <h4>Worse than asbestos? The CIRS rabbit hole</h4>
+          <p class="vsum">A long-form talk on how water-damaged buildings can make people chronically ill.</p>
+          <a class="vlink" href="https://www.youtube.com/watch?v=LGG7om1hHcU" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </article>
+    </div>
+    <p class="ex-note">Some ideas these experts teach, like CIRS, are still debated in mainstream medicine. Watch, compare and decide what fits you, together with your doctor.</p>
+  </div>
+</section>
+
+<section class="sources" id="sources">
+  <div class="wrap">
+    <span class="note-h">where this comes from</span>
+    <h2>References</h2>
+    <div class="srcgrid">
+      <div class="src panel">
+        <h4>Health agencies</h4>
+        <ul>
+          <li><a href="https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" target="_blank" rel="noopener">EPA: A Brief Guide to Mold, Moisture and Your Home</a></li>
+          <li><a href="https://www.who.int/europe/publications/i/item/WHO-EURO-2009-4256-44019-62079" target="_blank" rel="noopener">WHO: Guidelines for Indoor Air Quality, Dampness and Mould (2009)</a></li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK143943/" target="_blank" rel="noopener">WHO guidelines, full text (NCBI Bookshelf)</a></li>
+          <li><a href="https://www.manufacturing.net/home/news/13078955/fda-warns-consumers-of-serious-harm-from-drinking-miracle-mineral-solution-mms" target="_blank" rel="noopener">FDA warning: never drink chlorine dioxide (“MMS”)</a></li>
+        </ul>
+      </div>
+      <div class="src panel">
+        <h4>Research</h4>
+        <ul>
+          <li><a href="https://eta-publications.lbl.gov/publications/public-health-and-economic-impact" target="_blank" rel="noopener">Mudarri &amp; Fisk (2007): Public health and economic impact of dampness and mold</a></li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1513335" target="_blank" rel="noopener">Islam et al. (2006): Satratoxin G causes smell-nerve loss and brain inflammation in mice</a></li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3654247/" target="_blank" rel="noopener">Review: mycotoxins and human health in water-damaged buildings</a></li>
+          <li><a href="https://researchexperts.utmb.edu/en/publications/effect-of-chlorine-dioxide-gas-on-fungi-and-mycotoxins-associated/" target="_blank" rel="noopener">Wilson et al. (2005): Chlorine dioxide gas on Stachybotrys and its toxins</a></li>
+          <li><a href="https://researchexperts.utmb.edu/en/publications/efficacy-of-chlorine-dioxide-as-a-gas-and-in-solution-in-the-inac/" target="_blank" rel="noopener">Wilson et al. (2005): Chlorine dioxide gas vs. solution on trichothecenes</a></li>
+        </ul>
+      </div>
+      <div class="src panel">
+        <h4>Cleanup &amp; remediation</h4>
+        <ul>
+          <li><a href="https://www.randrmagonline.com/articles/90591-mycotoxin-control-as-a-critical-part-of-mold-remediation" target="_blank" rel="noopener">Superstratum: Mycotoxin control as a critical part of mold remediation</a></li>
+          <li><a href="https://www.randrmagonline.com/articles/90666-superstratum-announces-release-of-white-paper-on-mycotoxins" target="_blank" rel="noopener">Superstratum white paper on mycotoxins</a></li>
+          <li><a href="https://randrmagonline.com/articles/90623-mold-and-mycotoxins-definitions-function-and-impact-on-the-environment" target="_blank" rel="noopener">Ask the Expert: mold and mycotoxins defined</a></li>
+          <li><a href="https://www.youtube.com/watch?v=DRzQGKd4WrU" target="_blank" rel="noopener">Superstratum whole-home system, step 1 (video)</a></li>
+        </ul>
+      </div>
+      <div class="src panel">
+        <h4>Books</h4>
+        <ul class="books">
+          <li><b>Surviving Mold</b> · Dr. Ritchie Shoemaker</li>
+          <li><b>Toxic</b> · Dr. Neil Nathan</li>
+          <li><b>Break the Mold</b> · Dr. Jill Crista</li>
+          <li><b>The Mold Medic</b> · Michael Rubino</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="vmodal" id="vmodal" hidden>
+  <div class="vm-box" role="dialog" aria-modal="true" aria-labelledby="vm-title">
+    <div class="vm-top"><p id="vm-title"></p><button type="button" class="vm-x" id="vm-x" aria-label="Close video">✕</button></div>
+    <div class="vm-frame" id="vm-frame"></div>
+    <a class="vlink" id="vm-yt" href="#" target="_blank" rel="noopener">Having trouble? Watch on YouTube ↗</a>
+  </div>
+</div>
 
 <div class="creep" aria-hidden="true"></div>
 <section class="reset" id="reset">
@@ -2046,6 +2238,19 @@ function growMold(c,host,opt){
     const dots=$$('#rows .dot');let done=false;
     onScreen($('#ladder'),v=>{if(v&&!done){done=true;dots.forEach(d=>{d.style.transition='none';d.style.left='0%'});requestAnimationFrame(()=>requestAnimationFrame(()=>dots.forEach((d,i)=>{d.style.transition='';d.style.transitionDelay=(i*50)+'ms';d.style.left=d.dataset.v+'%'})))}});
   }
+})();
+
+
+/* ================= EXPERT VIDEOS ================= */
+(()=>{
+  const m=$('#vmodal'),fr=$('#vm-frame'),tt=$('#vm-title'),yt=$('#vm-yt'),x=$('#vm-x');let last=null;
+  function open(id,title,btn){last=btn;tt.textContent=title;yt.href='https://www.youtube.com/watch?v='+id;
+    fr.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&playsinline=1&modestbranding=1" title="'+title.replace(/"/g,'&quot;')+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    m.hidden=false;document.body.style.overflow='hidden';x.focus()}
+  function close(){m.hidden=true;fr.innerHTML='';document.body.style.overflow='';if(last)last.focus()}
+  $$('[data-yt]').forEach(b=>b.addEventListener('click',()=>open(b.dataset.yt,b.dataset.title,b)));
+  x.addEventListener('click',close);m.addEventListener('click',e=>{if(e.target===m)close()});
+  addEventListener('keydown',e=>{if(e.key==='Escape'&&!m.hidden)close()});
 })();
 
 /* ================= NAV + PROGRESS ================= */
