@@ -16,7 +16,7 @@
 <meta name="theme-color" content="#0c130e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&family=Nunito:wght@400;600;700&family=Caveat:wght@500;700&display=swap">
 <style>
 /* Layout: fluorescence-microscopy world. Hero = live neural network you hijack. Three chapters in order: 01 nerves hijacked → 02 clean food → 03 carrier food (meat lens). Single deliberate dark look. */
 :root{
@@ -34,8 +34,8 @@
   --leaf:#17a35f;    /* clean food */
   --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --f-serif:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --f-body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"Geist Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-body:"Nunito","Trebuchet MS",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Caveat","Segoe Print","Bradley Hand",cursive;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -51,7 +51,7 @@ p{margin:0}
 h1,h2,h3,h4{margin:0;font-family:var(--f-display);text-wrap:balance;letter-spacing:-.02em}
 em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:0}
 .wrap{max-width:1180px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
-.mono{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.mono{font-family:var(--f-mono);font-size:1.2rem;letter-spacing:0;text-transform:none;line-height:1.2}
 .muted{color:var(--muted)}
 .prose{max-width:62ch}
 
@@ -62,7 +62,7 @@ em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing
 .logo i{width:10px;height:10px;border-radius:50%;background:var(--magenta);box-shadow:0 0 12px var(--magenta),0 0 2px #fff inset;display:block;animation:beat 1.8s ease-in-out infinite}
 @keyframes beat{50%{transform:scale(.7);opacity:.7}}
 .chap{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
-.chap a{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:99px;white-space:nowrap;border:1px solid transparent;transition:.2s}
+.chap a{font-family:var(--f-mono);font-size:0.97rem;letter-spacing:0;text-transform:none;color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:99px;white-space:nowrap;border:1px solid transparent;transition:.2s}
 .chap a:hover{color:var(--ink);border-color:var(--line-2)}
 .chap a.on{color:var(--void);background:var(--ink)}
 .progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--cyan),var(--magenta),var(--amber))}
@@ -109,7 +109,7 @@ em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing
 .chips{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;pointer-events:auto}
 .chip{display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;border-radius:14px;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border:1px solid var(--line-2);text-decoration:none;color:var(--ink);transition:transform .25s,border-color .25s}
 .chip:hover{transform:translateY(-2px);border-color:var(--c)}
-.chip span{font-family:var(--f-mono);font-size:.7rem;color:var(--void);background:var(--c);border-radius:8px;padding:5px 7px}
+.chip span{font-family:var(--f-mono);font-size:0.99rem;color:var(--void);background:var(--c);border-radius:8px;padding:5px 7px}
 .chip b{font-weight:500;font-size:.95rem}
 .stats{margin-top:clamp(48px,7vw,90px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);pointer-events:auto}
 .stat{padding:20px 18px 6px 0;display:grid;gap:6px;align-content:start}
@@ -150,7 +150,7 @@ em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing
 .ncard .meta{padding:0 6px;display:grid;gap:10px}
 .ncard h4{font-size:1.35rem;font-weight:600;line-height:1.1}
 .tagrow{display:flex;gap:6px;flex-wrap:wrap}
-.tag{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;border-radius:6px;border:1px solid var(--line-2);color:var(--muted)}
+.tag{font-family:var(--f-mono);font-size:0.88rem;letter-spacing:0;text-transform:none;padding:4px 8px;border-radius:6px;border:1px solid var(--line-2);color:var(--muted)}
 .tag.m{color:var(--magenta);border-color:rgba(138,63,252,.4)}
 .tag.c{color:var(--cyan);border-color:rgba(10,156,196,.4)}
 .tag.l{color:var(--leaf);border-color:rgba(23,163,95,.4)}
@@ -171,7 +171,7 @@ em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing
 .leg b{font-weight:600;font-size:.98rem;display:block}
 .leg span{font-size:.86rem;color:var(--muted)}
 .big-plain{font-family:var(--f-serif);font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.2;color:var(--ink)}
-.big-plain::before{content:"In plain words";display:block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta);margin-bottom:10px}
+.big-plain::before{content:"In plain words";display:block;font-family:var(--f-mono);font-size:0.91rem;letter-spacing:0;text-transform:none;color:var(--magenta);margin-bottom:10px}
 
 /* ---------- mechanisms ---------- */
 .mech{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
@@ -189,7 +189,7 @@ em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing
 /* ---------- risk ladder ---------- */
 .ladder{padding:clamp(18px,3vw,32px)}
 .lad-head{display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);gap:18px;margin-bottom:10px}
-.zones{display:grid;grid-template-columns:1fr 1fr 1fr;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase}
+.zones{display:grid;grid-template-columns:1fr 1fr 1fr;font-family:var(--f-mono);font-size:0.91rem;letter-spacing:0;text-transform:none}
 .zones span:nth-child(1){color:var(--leaf)}.zones span:nth-child(2){color:var(--amber);text-align:center}.zones span:nth-child(3){color:var(--magenta);text-align:right}
 .lrow{display:grid;grid-template-columns:minmax(140px,220px) minmax(0,1fr);gap:18px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
 .lrow .nm{font-size:.92rem}
@@ -205,9 +205,9 @@ em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing
 .food{padding:20px;display:grid;gap:12px;align-content:start;position:relative;overflow:hidden}
 .food svg{width:64px;height:64px;display:block}
 .food h4{font-size:1.2rem;font-weight:600}
-.food .eg{font-family:var(--f-mono);font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.food .eg{font-family:var(--f-mono);font-size:0.99rem;color:var(--muted);letter-spacing:0}
 .food p{font-size:.9rem;color:var(--text2)}
-.food .why{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.14em;color:var(--leaf);text-transform:uppercase}
+.food .why{font-family:var(--f-mono);font-size:0.88rem;letter-spacing:0;color:var(--leaf);text-transform:none}
 .allies{margin-top:18px;padding:26px;display:grid;gap:18px}
 .allies-top{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:end}
 .allies h4{font-size:1.5rem;font-weight:600}
@@ -230,20 +230,20 @@ em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing
 .lens-wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:stretch}
 .lens-stage{padding:12px;display:grid;gap:12px}
 .tabs{display:flex;gap:6px;flex-wrap:wrap}
-.tab{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:9px 14px;border-radius:99px;border:1px solid var(--line-2);color:var(--muted);transition:.2s}
+.tab{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:0.99rem;letter-spacing:0;text-transform:none;padding:9px 14px;border-radius:99px;border:1px solid var(--line-2);color:var(--muted);transition:.2s}
 .tab:hover{color:var(--ink)}
 .tab[aria-selected="true"]{background:var(--amber);color:var(--void);border-color:var(--amber)}
 .tab:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
 .canvas-box{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;max-width:100%;background:#1a0b0d}
 #lens{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:none}
 .hud{position:absolute;left:12px;right:12px;top:12px;display:flex;justify-content:space-between;gap:10px;pointer-events:none}
-.hud span{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:8px;background:rgba(245,248,250,.7);backdrop-filter:blur(6px);color:var(--ink)}
+.hud span{font-family:var(--f-mono);font-size:0.94rem;letter-spacing:0;text-transform:none;padding:6px 10px;border-radius:8px;background:rgba(245,248,250,.7);backdrop-filter:blur(6px);color:var(--ink)}
 .hud #found{color:var(--magenta);font-variant-numeric:tabular-nums}
 .lens-tip{font-size:.84rem;color:var(--muted);padding:0 4px 4px}
 .dossier{padding:26px;display:grid;gap:18px;align-content:start}
 .dossier h4{font-size:2rem;font-weight:650;line-height:1;font-variation-settings:"wdth" 85}
 .dossier dl{margin:0;display:grid;gap:14px}
-.dossier dt{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:4px}
+.dossier dt{font-family:var(--f-mono);font-size:0.88rem;letter-spacing:0;text-transform:none;color:var(--amber);margin-bottom:4px}
 .dossier dt.n{color:var(--magenta)}
 .dossier dt.k{color:var(--leaf)}
 .dossier dd{margin:0;font-size:.93rem;color:var(--text2)}
@@ -257,7 +257,7 @@ em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing
 .stations::after{content:"";position:absolute;top:22px;left:10%;width:12px;height:12px;border-radius:50%;background:var(--magenta);box-shadow:0 0 18px var(--magenta);animation:travel 5s cubic-bezier(.6,0,.4,1) infinite}
 @keyframes travel{0%{left:10%}100%{left:calc(90% - 12px)}}
 .st{display:grid;justify-items:center;text-align:center;gap:10px;padding:0 8px;position:relative;z-index:1}
-.st i{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--void);border:1px solid var(--line-2);font-style:normal;font-family:var(--f-mono);font-size:.74rem;color:var(--amber)}
+.st i{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--void);border:1px solid var(--line-2);font-style:normal;font-family:var(--f-mono);font-size:1.05rem;color:var(--amber)}
 .st:last-child i{color:var(--magenta);border-color:var(--magenta);box-shadow:0 0 22px rgba(138,63,252,.35)}
 .st b{font-size:.95rem;font-weight:600}
 .st span{font-size:.8rem;color:var(--muted)}
@@ -319,7 +319,7 @@ footer .wrap{display:grid;gap:26px}
 .mb b{font-family:var(--f-display);font-size:1.3rem;font-weight:600;letter-spacing:-.01em}
 .mb>span{font-size:.94rem;color:var(--text2)}
 .sym{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.sym i{font-style:normal;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:6px;border:1px solid var(--line-2);color:var(--muted)}
+.sym i{font-style:normal;font-family:var(--f-mono);font-size:0.91rem;letter-spacing:0;text-transform:none;padding:4px 8px;border-radius:6px;border:1px solid var(--line-2);color:var(--muted)}
 .move.on .sym i{color:var(--magenta);border-color:rgba(138,63,252,.4)}
 .next-link{margin-top:clamp(36px,5vw,56px);display:inline-flex;align-items:baseline;gap:12px;flex-wrap:wrap;text-decoration:none;color:var(--ink);font-family:var(--f-display);font-size:clamp(1.5rem,3.4vw,2.4rem);font-weight:600;letter-spacing:-.02em}
 .next-link span{font-family:var(--f-serif);font-weight:400;font-style:italic;color:var(--muted)}
@@ -339,7 +339,7 @@ footer .wrap{display:grid;gap:26px}
 .stage-card.s-mid{border-color:rgba(217,132,0,.4)}
 .stage-card.s-no{border-color:rgba(138,63,252,.4)}
 .st-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
-.stage-card .pill{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;color:var(--void)}
+.stage-card .pill{font-family:var(--f-mono);font-size:0.88rem;letter-spacing:0;text-transform:none;padding:4px 10px;border-radius:99px;color:var(--void)}
 .s-yes .pill{background:var(--leaf)}.s-mid .pill{background:var(--amber)}.s-no .pill{background:var(--magenta)}
 .s-yes .mono{color:var(--leaf)}.s-mid .mono{color:var(--amber)}.s-no .mono{color:var(--magenta)}
 .stage-card ul{margin:0;padding-left:1.1em;display:grid;gap:7px;font-size:.92rem;color:var(--text2)}
@@ -357,7 +357,7 @@ footer .wrap{display:grid;gap:26px}
 
 /* real-life footage */
 .scene{position:relative}
-.real{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px 8px 9px;border-radius:99px;background:rgba(245,248,250,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(18,23,31,.15);color:var(--ink);transition:.2s}
+.real{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:0.94rem;letter-spacing:0;text-transform:none;padding:8px 12px 8px 9px;border-radius:99px;background:rgba(245,248,250,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(18,23,31,.15);color:var(--ink);transition:.2s}
 .real i{width:16px;height:16px;border-radius:50%;background:var(--magenta);position:relative;box-shadow:0 0 12px rgba(138,63,252,.6)}
 .real i::after{content:"";position:absolute;left:6px;top:4.5px;border-left:6px solid #fff;border-top:3.5px solid transparent;border-bottom:3.5px solid transparent}
 .real:hover{border-color:var(--magenta);transform:translateY(-1px)}
@@ -378,13 +378,13 @@ dialog#rl::backdrop{background:rgba(18,23,31,.45);backdrop-filter:blur(6px)}
 .rl-play .ring::after{content:"";margin-left:6px;border-left:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent}
 .rl-play:hover .ring{transform:scale(1.07)}
 .rl-play b{font-family:var(--f-display);font-size:1.25rem;font-weight:600}
-.rl-play span{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rl-play span{font-family:var(--f-mono);font-size:0.91rem;letter-spacing:0;text-transform:none;color:var(--muted)}
 .rl-media .grain{position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 2px,transparent 2px 4px)}
 .rl-see{font-size:.95rem;color:var(--text2)}
 .rl-links{display:flex;flex-wrap:wrap;gap:8px}
 .rl-links a{font-size:.85rem;color:var(--ink);text-decoration:none;padding:8px 12px;border-radius:10px;border:1px solid var(--line-2)}
 .rl-links a:hover{border-color:var(--cyan)}
-.rl-warn{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.rl-warn{font-family:var(--f-mono);font-size:0.88rem;letter-spacing:0;text-transform:none;color:var(--amber)}
 
 /* responsive */
 @media (max-width:980px){
@@ -441,7 +441,7 @@ dialog#rl::backdrop{background:rgba(18,23,31,.45);backdrop-filter:blur(6px)}
 body.scrolled .menu{transform:none;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .25s ease,transform .3s ease,visibility 0s}
 .menu li{flex:1 0 auto;padding:0;border-left:1px solid var(--line)}
 .menu li:last-child{border-right:1px solid var(--line)}
-.menu a{display:block;text-align:center;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:15px 16px;border-radius:0;white-space:nowrap;border:0;transition:background .2s,color .2s}
+.menu a{display:block;text-align:center;font-family:var(--f-mono);font-size:0.94rem;letter-spacing:0;text-transform:none;color:var(--muted);text-decoration:none;padding:15px 16px;border-radius:0;white-space:nowrap;border:0;transition:background .2s,color .2s}
 .menu a:hover{color:var(--ink);background:var(--glass)}
 .menu a:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px}
 .menu a.on{background:var(--ink);color:#f5f8fa}
@@ -474,14 +474,14 @@ body::after{opacity:.03}
 .ms-comp ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .ms-comp li{display:grid;gap:2px;padding-left:14px;border-left:3px solid var(--k)}
 .ms-comp li b{font-size:.98rem}
-.ms-comp li .sub{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.ms-comp li .sub{font-family:var(--f-mono);font-size:0.91rem;letter-spacing:0;color:var(--muted);text-transform:none}
 .ms-comp li span:last-child{font-size:.9rem;color:var(--text2)}
 .ms-ev{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .ms-use{margin-top:18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
 .tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:none}
 .tl li{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 18px 20px;display:grid;gap:6px;align-content:start;box-shadow:0 1px 2px rgba(18,23,31,.04),0 10px 30px rgba(18,23,31,.05)}
 .tl li::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;border-radius:3px;background:#e2b53a}
-.tl .when{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:#a87d00}
+.tl .when{font-family:var(--f-mono);font-size:0.91rem;letter-spacing:0;text-transform:none;color:#a87d00}
 .tl b{font-family:var(--f-display);font-size:1.15rem;font-weight:600}
 .tl p{font-size:.9rem;color:var(--text2)}
 @media (max-width:980px){.ms-grid,.ms-use{grid-template-columns:1fr}.ms-ev{grid-template-columns:1fr}.tl{grid-template-columns:1fr 1fr}}
@@ -501,7 +501,7 @@ body::after{opacity:.03}
 .mold h4{font-size:1.35rem;font-weight:600;line-height:1.1}
 .mold .tox{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:12px}
 .mold .tox div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:baseline;font-size:.9rem;color:var(--text2)}
-.mold .tox b{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--magenta);font-weight:500;white-space:nowrap}
+.mold .tox b{font-family:var(--f-mono);font-size:0.94rem;letter-spacing:0;text-transform:none;color:var(--magenta);font-weight:500;white-space:nowrap}
 .mold .where{font-size:.86rem;color:var(--muted)}
 
 /* house explorer */
@@ -526,12 +526,12 @@ body::after{opacity:.03}
 .hum-top{display:flex;justify-content:space-between;align-items:end;gap:14px;flex-wrap:wrap}
 .hum-read{font-family:var(--f-display);font-size:clamp(3rem,7vw,4.6rem);line-height:.85;font-weight:600;letter-spacing:-.04em;font-variant-numeric:tabular-nums;color:var(--k,var(--leaf));transition:color .3s}
 .hum-read small{font-size:.4em;letter-spacing:0;color:var(--muted);margin-left:4px}
-.hum-zone{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:99px;color:#fff;background:var(--k,var(--leaf));transition:background .3s}
+.hum-zone{font-family:var(--f-mono);font-size:0.99rem;letter-spacing:0;text-transform:none;padding:6px 12px;border-radius:99px;color:#fff;background:var(--k,var(--leaf));transition:background .3s}
 .hum-scale{position:relative;padding-top:6px}
 .hum-scale input{width:100%;appearance:none;-webkit-appearance:none;height:12px;border-radius:99px;background:linear-gradient(90deg,rgba(10,156,196,.35) 0 14.3%,rgba(23,163,95,.35) 14.3% 42.9%,rgba(217,132,0,.35) 42.9% 57.1%,rgba(138,63,252,.35) 57.1%);outline:none;margin:0}
 .hum-scale input::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:3px solid var(--k,var(--leaf));box-shadow:0 2px 10px rgba(18,23,31,.2);cursor:grab}
 .hum-scale input::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#fff;border:3px solid var(--k,var(--leaf));box-shadow:0 2px 10px rgba(18,23,31,.2);cursor:grab}
-.hum-ticks{position:relative;height:14px;margin:8px 14px 0;font-family:var(--f-mono);font-size:.62rem;color:var(--muted)}.hum-ticks span{position:absolute;transform:translateX(-50%)}
+.hum-ticks{position:relative;height:14px;margin:8px 14px 0;font-family:var(--f-mono);font-size:0.88rem;color:var(--muted)}.hum-ticks span{position:absolute;transform:translateX(-50%)}
 .hum-wall{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:18px;align-items:center}
 .hum-wall svg{width:100%;display:block;border-radius:12px;border:1px solid var(--line)}
 .hum-msg{font-size:.98rem;color:var(--text2)}
@@ -566,16 +566,16 @@ body::after{opacity:.03}
 .tool .fig{border-radius:14px;border:1px solid var(--line);background:radial-gradient(120% 100% at 50% 0%,#ffffff,#eef3f7);overflow:hidden}
 .tool .fig svg{width:100%;display:block}
 .tool h4{font-size:2rem;font-weight:650;line-height:1;font-variation-settings:"wdth" 85}
-.tool h4 small{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:400;margin-top:8px}
+.tool h4 small{display:block;font-family:var(--f-mono);font-size:0.94rem;letter-spacing:0;text-transform:none;color:var(--muted);font-weight:400;margin-top:8px}
 .tool dl{margin:0;display:grid;gap:14px}
-.tool dt{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.tool dt{font-family:var(--f-mono);font-size:0.88rem;letter-spacing:0;text-transform:none;color:var(--cyan);margin-bottom:4px}
 .tool dt.k{color:var(--leaf)}
 .tool dt.n{color:var(--magenta)}
 .tool dt.a{color:var(--amber)}
 .tool dd{margin:0;font-size:.93rem;color:var(--text2)}
 .tool dd b{color:var(--ink);font-weight:600}
 .tool ul{margin:6px 0 0;padding-left:1.1em;display:grid;gap:6px}
-.evrow{display:flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.evrow{display:flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:0.88rem;letter-spacing:0;text-transform:none;color:var(--muted)}
 .evrow .ev{width:90px}
 
 /* gas timeline */
@@ -584,7 +584,7 @@ body::after{opacity:.03}
 .gas-head h4{font-size:1.6rem;font-weight:600}
 .gsteps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;counter-reset:g}
 .gsteps li{counter-increment:g;border:1px solid var(--line);border-radius:14px;padding:16px 14px;display:grid;gap:6px;align-content:start;position:relative;background:#fff}
-.gsteps li::before{content:counter(g,decimal-leading-zero);font-family:var(--f-mono);font-size:.7rem;color:var(--amber)}
+.gsteps li::before{content:counter(g,decimal-leading-zero);font-family:var(--f-mono);font-size:0.99rem;color:var(--amber)}
 .gsteps li.hot{border-color:rgba(138,63,252,.45);background:linear-gradient(180deg,rgba(138,63,252,.06),#fff)}
 .gsteps li.hot::before{color:var(--magenta)}
 .gsteps li.ok{border-color:rgba(23,163,95,.45)}
@@ -606,7 +606,7 @@ body::after{opacity:.03}
 .ft{padding:20px;display:grid;gap:10px;align-content:start}
 .ft svg{width:56px;height:56px;display:block}
 .ft h4{font-size:1.15rem;font-weight:600}
-.ft .eg{font-family:var(--f-mono);font-size:.66rem;color:var(--magenta);letter-spacing:.08em;text-transform:uppercase}
+.ft .eg{font-family:var(--f-mono);font-size:0.94rem;color:var(--magenta);letter-spacing:0;text-transform:none}
 .ft p{font-size:.88rem;color:var(--text2)}
 
 .ref{margin-top:18px;padding:18px 22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:.9rem;color:var(--text2)}
@@ -784,7 +784,7 @@ footer .wrap{position:relative}
 .inv-head p{font-size:1.15rem;color:var(--text2);max-width:58ch}
 .inv-stage{padding:14px;display:grid;gap:12px}
 .inv-toggle{display:inline-flex;justify-self:start;padding:4px;border-radius:99px;border:1px solid var(--line-2);background:var(--deep)}
-.inv-toggle button{all:unset;cursor:pointer;padding:10px 18px;border-radius:99px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:.25s}
+.inv-toggle button{all:unset;cursor:pointer;padding:10px 18px;border-radius:99px;font-family:var(--f-mono);font-size:1.02rem;letter-spacing:0;text-transform:none;color:var(--muted);transition:.25s}
 .inv-toggle button[aria-selected="true"]{background:var(--magenta);color:var(--void)}
 .inv-toggle button:first-child[aria-selected="true"]{background:var(--ink)}
 .inv-toggle button:focus-visible{outline:2px solid var(--mold);outline-offset:2px}
@@ -816,7 +816,7 @@ footer .wrap{position:relative}
 .sz i{display:block;width:var(--d);height:var(--d);border-radius:50%;background:var(--c,#bccbbd);box-shadow:0 0 18px var(--c,transparent);margin-bottom:10px}
 .sz:first-child i{width:100%;max-width:120px;height:6px;border-radius:3px;background:#8a7a5c;box-shadow:none;margin-bottom:24px}
 .sz b{font-size:1rem}
-.sz span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.sz span{font-family:var(--f-mono);font-size:1.02rem;color:var(--muted);font-variant-numeric:tabular-nums}
 .sz em{font-style:normal;font-size:.82rem;color:var(--text2)}
 .sz.hot{background:linear-gradient(180deg,rgba(192,132,252,.12),transparent);border:1px solid rgba(192,132,252,.35)}
 .sz.hot b,.sz.hot span{color:var(--magenta)}
@@ -841,6 +841,61 @@ footer .wrap{position:relative}
 
 @media (max-width:980px){.symgrid{grid-template-columns:1fr 1fr}.chain{grid-template-columns:1fr 1fr}.chain li:nth-child(3){border-left:0}.chain li:nth-child(n+3){border-top:1px solid var(--line)}.chain li:nth-child(3)::before{display:none}}
 @media (max-width:620px){.symgrid,.chain{grid-template-columns:1fr}.chain li+li{border-left:0;border-top:1px solid var(--line)}.chain li+li::before{left:22px;top:-12px;content:"↓"}.chain li:nth-child(3)::before{display:grid}.scale-row{grid-template-columns:1fr 1fr}#room{min-width:620px}.svgwrap{margin:0 -4px}}
+/* ===================== HAND-MADE TOUCHES ===================== */
+body{font-size:17px}
+.note-h{display:inline-block;font-family:var(--f-mono);font-size:clamp(1.45rem,2.6vw,1.9rem);line-height:1.1;color:var(--mold);transform:rotate(-2.5deg);transform-origin:left bottom;letter-spacing:0}
+.sick-head .note-h,.hero .note-h{color:var(--magenta)}
+.foot-note{margin-top:-6px;color:var(--mold);transform:rotate(-1.5deg)}
+.ch-head .mono{font-size:1.6rem;transform:rotate(-2deg);transform-origin:left;display:inline-block}
+
+/* hand-drawn underline under key words */
+.top h1 em.s,.inv-head h2 em.s,.ch-head h2 em.s,.sick-head h2 em.s,.reset h2 em.s,.check-head .ask em.s{
+  background-repeat:no-repeat;background-position:0 96%;background-size:100% .16em;padding-bottom:.06em;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 40 4, 80 12, 120 7 S 200 3, 240 8 S 285 10, 297 5' fill='none' stroke='%23a6d94f' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M20 12 C 70 8, 140 13, 210 9 S 270 11, 290 9' fill='none' stroke='%23a6d94f' stroke-opacity='.5' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E")}
+.inv-head h2 em.s,.sick-head h2 em.s,.check-head .ask em.s,.c1 .ch-head h2 em.s{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 40 4, 80 12, 120 7 S 200 3, 240 8 S 285 10, 297 5' fill='none' stroke='%23c084fc' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M20 12 C 70 8, 140 13, 210 9 S 270 11, 290 9' fill='none' stroke='%23c084fc' stroke-opacity='.5' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E")}
+.ask em.s{text-decoration:none}
+
+/* uneven, hand-cut card corners and softer shadows */
+.panel,.move,.ally,.ft{border-radius:26px 18px 28px 20px / 20px 28px 18px 26px!important;box-shadow:0 10px 30px rgba(0,0,0,.28)!important}
+.btn-mold{border-radius:30px 22px 28px 24px / 24px 30px 22px 28px;box-shadow:none;transform:rotate(-1deg)}
+.btn-mold:hover{transform:rotate(-1deg) translateY(-2px)}
+.btn-ghost{border-radius:22px 30px 24px 28px / 28px 22px 30px 24px}
+
+/* symptom cards pinned up a little crooked */
+.sg:nth-child(1){transform:rotate(-.8deg)}.sg:nth-child(2){transform:rotate(.6deg) translateY(6px)}.sg:nth-child(3){transform:rotate(-.4deg)}.sg:nth-child(4){transform:rotate(.9deg) translateY(4px)}
+.sg{border-top-width:0!important;border-left:4px solid var(--k)!important}
+.sg h4{font-size:1.35rem}
+.sg li{border-radius:14px 10px 16px 9px}
+
+/* mold "photos" taped to the page */
+.mold .scene{position:relative;overflow:visible;background:#f4f1e6!important;padding:8px 8px 26px;border-radius:3px;border:0;box-shadow:0 8px 24px rgba(0,0,0,.4)!important;aspect-ratio:auto;transform:rotate(-1.4deg)}
+.mold:nth-child(even) .scene{transform:rotate(1.2deg)}
+.mold:nth-child(3n) .scene{transform:rotate(-.6deg)}
+.mold .scene svg{height:auto;border-radius:2px}
+.mold .scene::before{content:"";position:absolute;top:-10px;left:50%;width:84px;height:22px;transform:translateX(-50%) rotate(-3deg);background:rgba(230,225,190,.55);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.mold .scene::after{content:attr(data-cap);position:absolute;left:12px;bottom:3px;font-family:var(--f-mono);font-size:1.15rem;color:#3d3a2e}
+
+/* chain: hand-drawn arrows */
+.chain li+li::before{content:"";width:34px;height:22px;left:-17px;border:0;border-radius:0;background:var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 22'%3E%3Cpath d='M3 13 C 10 7, 18 15, 27 10 M21 5 L28 10 L21 16' fill='none' stroke='%23bccbbd' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+@media (max-width:620px){.chain li+li::before{content:"";left:22px;top:-11px;transform:rotate(90deg)}}
+.chain b{font-size:1.3rem}
+
+/* toggle + check feel like paper buttons */
+.inv-toggle button{font-size:1.25rem}
+.qc button{border-radius:20px 14px 22px 16px}
+.check-head .mono{font-size:1.35rem;color:var(--mold)}
+
+/* hand-written margin note beside the room */
+.inv-stage{position:relative}
+.scribble-note{position:absolute;right:22px;top:14px;font-family:var(--f-mono);font-size:1.5rem;color:var(--mold);transform:rotate(-3deg);pointer-events:none;max-width:16ch;text-align:right;line-height:1.05}
+@media (max-width:720px){.scribble-note{position:static;justify-self:end;transform:rotate(-2deg)}}
+
+/* calm down the "dashboard" bits */
+.stats{border-top:2px dashed var(--line-2)}
+.stat+.stat{border-left:2px dashed var(--line)}
+.tag{border-radius:10px 6px 12px 7px;font-size:1rem;padding:2px 9px}
+.menu a{font-size:1.15rem}
+.ch-num{font-family:var(--f-mono);font-size:clamp(3.2rem,7vw,5rem);font-weight:700}
 </style>
 </head>
 <body>
@@ -866,13 +921,13 @@ footer .wrap{position:relative}
 <section class="top" id="top">
   <canvas id="swarm" aria-hidden="true"></canvas>
   <div class="wrap top-in">
-    <span class="eyebrow mono"><b>SAMPLE 01</b> You can't see it</span>
+    <span class="note-h">psst… you can't see it</span>
     <h1>Is it <em class="s">mold?</em></h1>
     <p class="ticker">That <span id="tick">brain fog that won't lift.</span></p>
-    <p class="top-lead">Mold makes an invisible poison called <b>mycotoxins</b>. You can't see it. You can't smell it. But it can be the reason you feel sick.</p>
+    <p class="top-lead">Mold makes an invisible poison called <b>mycotoxins</b>. You can't see it. You can't smell it. And it might be the reason you've been feeling the way you do.</p>
     <div class="top-cta">
       <a class="btn-mold" href="#invisible">See what's really in the air ↓</a>
-      <a class="btn-ghost" href="#check">Take the 30-second check</a>
+      <a class="btn-ghost" href="#check">Take the quick check</a>
     </div>
   </div>
 </section>
@@ -881,9 +936,9 @@ footer .wrap{position:relative}
 <section class="inv" id="invisible">
   <div class="wrap">
     <div class="inv-head">
-      <span class="eyebrow mono"><b>THE HIDDEN PART</b> What mold leaves in the air</span>
+      <span class="note-h">the part nobody tells you about ↓</span>
       <h2>Mold makes a poison <em class="s">you can't see.</em></h2>
-      <p>Mold is the fuzzy part you can see. Mycotoxins are the poisons it makes, and they are thousands of times smaller. They ride on dust into the air you breathe, in a room that looks perfectly clean.</p>
+      <p>That fuzzy spot on the wall is only the part you can see. The real problem is what it puts in the air: tiny poisons called mycotoxins, thousands of times smaller than the mold itself. They float around on dust, even in a room that looks spotless.</p>
     </div>
 
     <div class="inv-stage panel">
@@ -915,7 +970,7 @@ footer .wrap{position:relative}
           <circle cx="104" cy="166" r="14" fill="#1b2a17"/><circle cx="86" cy="226" r="11" fill="#1b2a17"/><circle cx="150" cy="236" r="9" fill="#1b2a17"/>
           <animateTransform attributeName="transform" type="scale" values="1;1.025;1" dur="5s" repeatCount="indefinite" additive="sum"/>
         </g>
-        <text x="40" y="345" class="rl" font-family="Geist Mono,monospace" font-size="12" letter-spacing="1.5" fill="#a6d94f">MOLD · YOU CAN SEE THIS</text>
+        <text x="40" y="345" class="rl" font-family="Caveat, cursive" font-size="17" fill="#a6d94f">Mold, you can see this</text>
         <g transform="translate(-110 0)">
         <!-- person -->
         <g id="person">
@@ -931,12 +986,12 @@ footer .wrap{position:relative}
           <g><circle cx="726" cy="262" r="16" fill="url(#rmglow)"><animate attributeName="r" values="10;22;10" dur="2.6s" begin="-1.2s" repeatCount="indefinite"/></circle><circle cx="726" cy="262" r="4" fill="#c084fc"/></g>
           <g><circle cx="652" cy="290" r="14" fill="url(#rmglow)"><animate attributeName="r" values="8;18;8" dur="2.2s" begin="-1.6s" repeatCount="indefinite"/></circle><circle cx="652" cy="290" r="3.4" fill="#c084fc"/></g>
         </g>
-        <g class="hit-labels" font-family="Geist Mono,monospace" font-size="11.5" letter-spacing="1.2" fill="#e6f0e2">
-          <text x="770" y="62">BRAIN FOG · HEADACHES</text>
-          <text x="782" y="110">STUFFY NOSE · SINUS</text>
-          <text x="782" y="194">COUGH · TIGHT CHEST</text>
-          <text x="782" y="266">NAUSEA · FATIGUE</text>
-          <text x="632" y="294" text-anchor="end">RASHES · ACHES</text>
+        <g class="hit-labels" font-family="Caveat, cursive" font-size="19" fill="#e6f0e2">
+          <text x="770" y="62">Brain fog, headaches</text>
+          <text x="782" y="110">Stuffy nose, sinus</text>
+          <text x="782" y="194">Cough, tight chest</text>
+          <text x="782" y="266">Nausea, fatigue</text>
+          <text x="632" y="294" text-anchor="end">Rashes, aches</text>
         </g>
         </g>
         <!-- toxins in the air -->
@@ -958,10 +1013,11 @@ footer .wrap{position:relative}
             <circle r="1.3"><animateMotion dur="4s" begin="-3s" repeatCount="indefinite"><mpath href="#fl4"/></animateMotion></circle>
             <circle r="1.5"><animateMotion dur="4.4s" begin="-.8s" repeatCount="indefinite"><mpath href="#fl5"/></animateMotion></circle>
           </g>
-          <text x="330" y="398" text-anchor="middle" font-family="Geist Mono,monospace" font-size="12" letter-spacing="1.5" fill="#c084fc">MYCOTOXINS · INVISIBLE · NO SMELL</text>
+          <text x="330" y="398" text-anchor="middle" font-family="Caveat, cursive" font-size="17" fill="#c084fc">Mycotoxins, invisible, no smell</text>
         </g>
-        <g class="clean-label"><text x="480" y="250" text-anchor="middle" font-family="Geist Mono,monospace" font-size="13" letter-spacing="1.6" fill="#8fa392">THE AIR LOOKS CLEAN</text></g>
+        <g class="clean-label"><text x="480" y="250" text-anchor="middle" font-family="Caveat, cursive" font-size="19" fill="#8fa392">The air looks clean</text></g>
       </svg></div>
+      <span class="scribble-note" aria-hidden="true">tap to see what's really in the air ↙</span>
       <p class="inv-cap" id="inv-cap">Toxins ride on dust from the mold to you. They reach your brain, nose, lungs, gut and skin.</p>
     </div>
 
@@ -1002,7 +1058,7 @@ footer .wrap{position:relative}
         <ul><li>Muscle or joint aches</li><li>Rashes and itchy skin</li><li>Nausea or belly upset</li><li>Sensitive to smells and chemicals</li><li>Numbness or tingling</li></ul>
       </article>
     </div>
-    <p class="sym-note">The link between damp, moldy homes and breathing problems is well proven. The other symptoms are commonly reported by people living in water-damaged buildings and are still being studied. Many other things can cause them too, so talk to a doctor.</p>
+    <p class="sym-note">Being straight with you: the link between damp, moldy homes and breathing problems is well proven. The other symptoms are commonly reported by people living in water-damaged buildings and are still being studied. Many other things can cause them too, so talk to a doctor.</p>
 
     <div class="check panel" id="check" aria-labelledby="qc-h">
       <div class="check-head"><p class="ask">Could mold be affecting <em class="s">you?</em></p><p class="mono" id="qc-h">Tap everything that sounds like you</p></div>
@@ -1030,7 +1086,7 @@ footer .wrap{position:relative}
 <section class="sick" id="sick">
   <div class="wrap">
     <div class="sick-head">
-      <span class="eyebrow mono"><b>SAMPLE 02</b> How it gets in</span>
+      <span class="note-h">so how does it get in?</span>
       <h2>Mold makes you <em class="s">sick.</em></h2>
       <p>Here's the path mycotoxins and spores take through your body, in five moves. Tap one to see where it happens.</p>
     </div>
@@ -1094,8 +1150,8 @@ footer .wrap{position:relative}
         <use href="#spore"><animateMotion dur="3.8s" begin="-1.2s" repeatCount="indefinite"><mpath href="#air1"/></animateMotion></use>
         <use href="#spore"><animateMotion dur="3s" begin="-2s" repeatCount="indefinite"><mpath href="#air2"/></animateMotion></use>
         <g fill="#2f6b4a" opacity=".7"><circle r="1.8"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#air2"/></animateMotion></circle><circle r="1.5"><animateMotion dur="2.9s" begin="-1s" repeatCount="indefinite"><mpath href="#air0"/></animateMotion></circle><circle r="1.6"><animateMotion dur="2.4s" begin="-.6s" repeatCount="indefinite"><mpath href="#air1"/></animateMotion></circle></g>
-        <text x="-80" y="-60" font-family="Geist Mono,monospace" font-size="9" fill="#2f6b4a" letter-spacing="1">SPORES</text>
-        <text x="30" y="-70" font-family="Geist Mono,monospace" font-size="9" fill="#2f6b4a" letter-spacing="1">FRAGMENTS &lt;3µm</text>
+        <text x="-80" y="-60" font-family="Caveat, cursive" font-size="13" fill="#2f6b4a">Spores</text>
+        <text x="30" y="-70" font-family="Caveat, cursive" font-size="13" fill="#2f6b4a">FRAGMENTS &lt;3µm</text>
       </g>
       <!-- 1: sinus lining with hyphae -->
       <g class="zs" data-i="1">
@@ -1109,7 +1165,7 @@ footer .wrap{position:relative}
         </g>
         <g fill="#2f6b4a"><circle cx="-44" cy="-62" r="4"/><circle cx="-78" cy="-48" r="3.4"/><circle cx="40" cy="-72" r="4"/><circle cx="68" cy="-48" r="3.4"/></g>
         <g fill="#e04a5f"><circle cx="-90" cy="60" r="5"><animate attributeName="r" values="4;7;4" dur="1.6s" repeatCount="indefinite"/></circle><circle cx="-10" cy="74" r="5"><animate attributeName="r" values="4;7;4" dur="1.6s" begin="-.5s" repeatCount="indefinite"/></circle><circle cx="80" cy="64" r="5"><animate attributeName="r" values="4;7;4" dur="1.6s" begin="-1s" repeatCount="indefinite"/></circle></g>
-        <text x="-118" y="128" font-family="Geist Mono,monospace" font-size="9" fill="#b04060" letter-spacing="1">INFLAMED LINING</text>
+        <text x="-118" y="128" font-family="Caveat, cursive" font-size="13" fill="#b04060">Inflamed lining</text>
       </g>
       <!-- 2: blood vessel with toxins -->
       <g class="zs" data-i="2">
@@ -1124,7 +1180,7 @@ footer .wrap{position:relative}
         <use href="#mtx"><animateMotion dur="3.2s" repeatCount="indefinite" path="M-150 0 H150"/></use>
         <use href="#mtx"><animateMotion dur="3.2s" begin="-1.1s" repeatCount="indefinite" path="M-150 -6 H150"/></use>
         <use href="#mtx"><animateMotion dur="3.2s" begin="-2.2s" repeatCount="indefinite" path="M-150 8 H150"/></use>
-        <text x="-60" y="-80" font-family="Geist Mono,monospace" font-size="9" fill="#8a3ffc" letter-spacing="1">MYCOTOXINS IN TRANSIT</text>
+        <text x="-60" y="-80" font-family="Caveat, cursive" font-size="13" fill="#8a3ffc">Mycotoxins in transit</text>
       </g>
       <!-- 3: liver cells -->
       <g class="zs" data-i="3">
@@ -1140,7 +1196,7 @@ footer .wrap{position:relative}
         <g fill="#d98400"><circle cx="-60" cy="-32" r="5"/><circle cx="0" cy="-32" r="5"/><circle cx="60" cy="-32" r="5"/><circle cx="-30" cy="22" r="5"/><circle cx="30" cy="22" r="5"/><circle cx="-90" cy="22" r="5"/><circle cx="90" cy="22" r="5"/></g>
         <use href="#mtx"><animateMotion dur="3s" repeatCount="indefinite" path="M-120 -110 Q -20 -90 0 -32"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.85;1" dur="3s" repeatCount="indefinite"/></use>
         <use href="#mtx"><animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite" path="M120 -100 Q 60 -40 30 22"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.85;1" dur="3s" begin="-1.5s" repeatCount="indefinite"/></use>
-        <text x="-70" y="96" font-family="Geist Mono,monospace" font-size="9" fill="#a86400" letter-spacing="1">LIVER CELLS UNDER LOAD</text>
+        <text x="-70" y="96" font-family="Caveat, cursive" font-size="13" fill="#a86400">Liver cells under load</text>
       </g>
       <!-- 4: olfactory route to brain -->
       <g class="zs" data-i="4">
@@ -1154,15 +1210,15 @@ footer .wrap{position:relative}
         <path d="M-22 -96 L-40 -84 M22 -96 L40 -86" stroke="#0a9cc4" stroke-width="1.6"/>
         <use href="#mtx"><animateMotion dur="3.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#olf"/></animateMotion></use>
         <use href="#mtx"><animateMotion dur="3.4s" begin="-1.7s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#olf"/></animateMotion></use>
-        <text x="-118" y="70" font-family="Geist Mono,monospace" font-size="9" fill="#b04060" letter-spacing="1">NOSE</text>
-        <text x="-118" y="28" font-family="Geist Mono,monospace" font-size="9" fill="#5b6675" letter-spacing="1">SKULL BASE</text>
-        <text x="34" y="-112" font-family="Geist Mono,monospace" font-size="9" fill="#0a9cc4" letter-spacing="1">BRAIN</text>
+        <text x="-118" y="70" font-family="Caveat, cursive" font-size="13" fill="#b04060">Nose</text>
+        <text x="-118" y="28" font-family="Caveat, cursive" font-size="13" fill="#5b6675">Skull base</text>
+        <text x="34" y="-112" font-family="Caveat, cursive" font-size="13" fill="#0a9cc4">Brain</text>
       </g>
     </g>
   </g>
   <circle cx="410" cy="215" r="128" fill="none" stroke="#0a9cc4" stroke-width="2"/>
-  <text x="410" y="372" text-anchor="middle" font-family="Geist Mono,monospace" font-size="10" fill="#0a9cc4" letter-spacing="1.4">CLOSE-UP</text>
-  <text id="zcap" x="410" y="390" text-anchor="middle" font-family="Geist,sans-serif" font-size="12.5" fill="#12171f"></text>
+  <text x="410" y="372" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#0a9cc4">Close-up</text>
+  <text id="zcap" x="410" y="390" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12.5" fill="#12171f"></text>
         </svg>
       </div>
       <ul class="moves">
@@ -1181,7 +1237,7 @@ footer .wrap{position:relative}
 <section class="hero" id="brain">
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="wrap hero-in">
-    <span class="eyebrow mono"><b>SAMPLE 03</b> Once it's inside</span>
+    <span class="note-h">once it's inside…</span>
     <h2 class="h1">It goes for your <em class="s">brain.</em></h2>
     <p class="sub">Mold doesn't just stain your walls. Its toxins ride the air into your body and can reach your nervous system. Here's what it makes, where it hides, and how to clear it out of your home and your body.</p>
     <p class="hint mono">Move across the network. You are the toxin.</p>
@@ -1206,7 +1262,7 @@ footer .wrap{position:relative}
     <div class="ch-head">
       <div class="ch-num">01</div>
       <div>
-        <p class="mono">Chapter 01 · The toxins</p>
+        <p class="mono">part 1: the toxins</p>
         <h2>Meet the molds and their <em class="s">poisons</em></h2>
         <p class="lead">Mold is a fungus. When it grows on wet drywall, wood or carpet, some kinds make chemicals called mycotoxins to fight off other microbes. Those chemicals don't stay on the wall. They cling to dust and get into the air you breathe.</p>
       </div>
@@ -1215,13 +1271,13 @@ footer .wrap{position:relative}
     <div class="sub-h"><h3>The usual suspects</h3><span class="mono">6 indoor molds</span></div>
     <div class="molds">
       <article class="mold panel">
-        <div class="scene"><svg viewBox="0 0 320 200" role="img" aria-label="Stachybotrys: dark stalks topped with slimy clusters of black spores">
+        <div class="scene" data-cap="wet drywall, black mold"><svg viewBox="0 0 320 200" role="img" aria-label="Stachybotrys: dark stalks topped with slimy clusters of black spores">
           <rect width="320" height="200" fill="#f4f1ea"/><path d="M0 170 H320 V200 H0z" fill="#d8cdb8"/><path d="M0 170 H320" stroke="#b9a98c" stroke-width="2"/>
           <g stroke="#2b2b2b" stroke-width="3" fill="none" stroke-linecap="round"><path d="M80 170 q4 -40 0 -80"/><path d="M80 120 q16 -10 26 -34"/><path d="M160 170 q-6 -50 4 -96"/><path d="M240 170 q2 -36 -6 -70"/><path d="M238 128 q-16 -8 -24 -30"/></g>
           <g fill="#1e1e1e"><circle cx="80" cy="84" r="13"><animate attributeName="r" values="13;14.5;13" dur="3s" repeatCount="indefinite"/></circle><circle cx="108" cy="80" r="10"/><circle cx="164" cy="68" r="15"><animate attributeName="r" values="15;16.5;15" dur="3s" begin="-1s" repeatCount="indefinite"/></circle><circle cx="234" cy="94" r="12"/><circle cx="212" cy="92" r="9"/></g>
           <g fill="#555"><circle cx="76" cy="80" r="3"/><circle cx="160" cy="63" r="3.4"/><circle cx="230" cy="90" r="3"/></g>
           <g fill="#1e1e1e" opacity=".6"><circle cx="130" cy="40" r="2.4"><animate attributeName="cy" values="60;20;60" dur="6s" repeatCount="indefinite"/></circle><circle cx="200" cy="40" r="2"><animate attributeName="cy" values="70;30;70" dur="7s" repeatCount="indefinite"/></circle></g>
-          <text x="14" y="190" font-family="Geist Mono,monospace" font-size="9" fill="#5b4d36" letter-spacing="1.2">WET DRYWALL PAPER</text>
+          <text x="14" y="190" font-family="Caveat, cursive" font-size="13" fill="#5b4d36">Wet drywall paper</text>
         </svg></div>
         <div class="meta">
           <div class="tagrow"><span class="tag m">Stachybotrys</span><span class="tag">“Black mold”</span></div>
@@ -1231,7 +1287,7 @@ footer .wrap{position:relative}
         </div>
       </article>
       <article class="mold panel">
-        <div class="scene"><svg viewBox="0 0 320 200" role="img" aria-label="Aspergillus: a stalk with a round head and chains of spores radiating out">
+        <div class="scene" data-cap="aspergillus up close"><svg viewBox="0 0 320 200" role="img" aria-label="Aspergillus: a stalk with a round head and chains of spores radiating out">
           <rect width="320" height="200" fill="#eef6f1"/>
           <g stroke="#3c7d5a" stroke-width="3" fill="none"><path d="M110 196 V96"/><path d="M220 196 V110"/></g>
           <circle cx="110" cy="80" r="18" fill="#cfe9d9" stroke="#3c7d5a" stroke-width="2"/><circle cx="220" cy="96" r="14" fill="#cfe9d9" stroke="#3c7d5a" stroke-width="2"/>
@@ -1249,7 +1305,7 @@ footer .wrap{position:relative}
         </div>
       </article>
       <article class="mold panel">
-        <div class="scene"><svg viewBox="0 0 320 200" role="img" aria-label="Penicillium: brush-like branching stalks with chains of blue-green spores">
+        <div class="scene" data-cap="penicillium, the fuzzy blue one"><svg viewBox="0 0 320 200" role="img" aria-label="Penicillium: brush-like branching stalks with chains of blue-green spores">
           <rect width="320" height="200" fill="#eef4f8"/>
           <g stroke="#2f6f8f" stroke-width="2.6" fill="none" stroke-linecap="round">
             <path d="M160 196 V110 M160 110 l-22 -16 M160 110 l0 -20 M160 110 l22 -16 M138 94 l-8 -12 M138 94 l4 -14 M160 90 l-6 -14 M160 90 l6 -14 M182 94 l-4 -14 M182 94 l8 -12"/>
@@ -1268,14 +1324,14 @@ footer .wrap{position:relative}
         </div>
       </article>
       <article class="mold panel">
-        <div class="scene"><svg viewBox="0 0 320 200" role="img" aria-label="Chaetomium: round fruiting bodies covered in long curly hairs">
+        <div class="scene" data-cap="chaetomium on wet wood"><svg viewBox="0 0 320 200" role="img" aria-label="Chaetomium: round fruiting bodies covered in long curly hairs">
           <rect width="320" height="200" fill="#f6f2ec"/><path d="M0 160 H320 V200 H0z" fill="#e3d6c3"/>
           <g fill="#6b5a3e" stroke="#4a3d28" stroke-width="2"><ellipse cx="100" cy="140" rx="22" ry="20"/><ellipse cx="210" cy="132" rx="28" ry="26"/></g>
           <g fill="none" stroke="#4a3d28" stroke-width="1.6" stroke-linecap="round">
             <path d="M100 120 q-4 -20 6 -30 q8 -8 0 -14 M88 124 q-20 -14 -16 -30 q4 -10 -6 -14 M112 124 q18 -12 16 -28 q-2 -10 8 -12 M82 136 q-24 -2 -30 -14 M118 134 q22 -4 30 -18"><animateTransform attributeName="transform" type="rotate" values="-3 100 140;3 100 140;-3 100 140" dur="4s" repeatCount="indefinite"/></path>
             <path d="M210 106 q-6 -24 6 -36 q10 -8 2 -18 M194 112 q-24 -16 -20 -36 q4 -12 -8 -18 M226 110 q22 -14 20 -34 q-2 -12 10 -16 M184 128 q-30 -2 -38 -18 M236 124 q28 -6 38 -24"><animateTransform attributeName="transform" type="rotate" values="3 210 132;-3 210 132;3 210 132" dur="4.6s" repeatCount="indefinite"/></path>
           </g>
-          <text x="14" y="186" font-family="Geist Mono,monospace" font-size="9" fill="#5b4d36" letter-spacing="1.2">WET WOOD · PAPER · SUBFLOOR</text>
+          <text x="14" y="186" font-family="Caveat, cursive" font-size="13" fill="#5b4d36">Wet wood, paper, subfloor</text>
         </svg></div>
         <div class="meta">
           <div class="tagrow"><span class="tag m">Chaetomium</span><span class="tag">Water-damage marker</span></div>
@@ -1285,7 +1341,7 @@ footer .wrap{position:relative}
         </div>
       </article>
       <article class="mold panel">
-        <div class="scene"><svg viewBox="0 0 320 200" role="img" aria-label="Fusarium: curved banana-shaped spores with cross walls">
+        <div class="scene" data-cap="fusarium spores"><svg viewBox="0 0 320 200" role="img" aria-label="Fusarium: curved banana-shaped spores with cross walls">
           <rect width="320" height="200" fill="#fbf0f3"/>
           <g fill="#f7d3df" stroke="#c0466f" stroke-width="2">
             <g transform="translate(100 90) rotate(-20)"><path d="M-50 0 Q0 -40 50 0 Q0 -22 -50 0z"/><path d="M-30 -9 v-8 M-10 -13 v-10 M10 -13 v-10 M30 -9 v-8" stroke-width="1.4"/><animateTransform attributeName="transform" type="rotate" values="-20;-14;-20" dur="5s" repeatCount="indefinite" additive="sum"/></g>
@@ -1303,7 +1359,7 @@ footer .wrap{position:relative}
         </div>
       </article>
       <article class="mold panel">
-        <div class="scene"><svg viewBox="0 0 320 200" role="img" aria-label="Cladosporium and Alternaria: branching chains of dark olive spores">
+        <div class="scene" data-cap="window sill mold"><svg viewBox="0 0 320 200" role="img" aria-label="Cladosporium and Alternaria: branching chains of dark olive spores">
           <rect width="320" height="200" fill="#f1f3ec"/>
           <g fill="#6e7a45" stroke="#4d5730" stroke-width="1.2">
             <ellipse cx="90" cy="170" rx="5" ry="8"/><ellipse cx="88" cy="152" rx="5" ry="8"/><ellipse cx="84" cy="134" rx="5" ry="8"/><ellipse cx="96" cy="118" rx="5" ry="8"/><ellipse cx="74" cy="118" rx="5" ry="8"/><ellipse cx="100" cy="100" rx="5" ry="8"/><ellipse cx="68" cy="100" rx="5" ry="8"/><ellipse cx="106" cy="82" rx="4.6" ry="7"/><ellipse cx="62" cy="82" rx="4.6" ry="7"/>
@@ -1314,8 +1370,8 @@ footer .wrap{position:relative}
             <g transform="translate(224 78)"><path d="M-8 0 q0 -16 8 -22 q8 6 8 22z"/></g>
             <animateTransform attributeName="transform" type="rotate" values="-2 220 180;2 220 180;-2 220 180" dur="3.5s" repeatCount="indefinite"/>
           </g>
-          <text x="40" y="40" font-family="Geist Mono,monospace" font-size="9" fill="#4d5730" letter-spacing="1.2">CLADOSPORIUM</text>
-          <text x="186" y="40" font-family="Geist Mono,monospace" font-size="9" fill="#5a4426" letter-spacing="1.2">ALTERNARIA</text>
+          <text x="40" y="40" font-family="Caveat, cursive" font-size="13" fill="#4d5730">Cladosporium</text>
+          <text x="186" y="40" font-family="Caveat, cursive" font-size="13" fill="#5a4426">Alternaria</text>
         </svg></div>
         <div class="meta">
           <div class="tagrow"><span class="tag m">Cladosporium · Alternaria</span><span class="tag">Olive to black</span></div>
@@ -1345,7 +1401,7 @@ footer .wrap{position:relative}
         </div>
       </article>
       <article class="mcard panel">
-        <div class="ico"><svg viewBox="0 0 150 150" aria-hidden="true"><ellipse cx="75" cy="75" rx="52" ry="30" fill="#fff3df" stroke="#d98400" stroke-width="2"/><path d="M34 75 q10 -18 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#d98400" stroke-width="2"/><g><polygon points="-9,0 -4.5,-8 4.5,-8 9,0 4.5,8 -4.5,8" fill="#efe6ff" stroke="#8a3ffc" stroke-width="2"/><animateMotion dur="3s" repeatCount="indefinite" path="M10 20 Q 60 40 72 70"/></g><text x="75" y="130" text-anchor="middle" font-family="Geist Mono,monospace" font-size="9" fill="#a86400" letter-spacing="1">CELL POWER</text></svg></div>
+        <div class="ico"><svg viewBox="0 0 150 150" aria-hidden="true"><ellipse cx="75" cy="75" rx="52" ry="30" fill="#fff3df" stroke="#d98400" stroke-width="2"/><path d="M34 75 q10 -18 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#d98400" stroke-width="2"/><g><polygon points="-9,0 -4.5,-8 4.5,-8 9,0 4.5,8 -4.5,8" fill="#efe6ff" stroke="#8a3ffc" stroke-width="2"/><animateMotion dur="3s" repeatCount="indefinite" path="M10 20 Q 60 40 72 70"/></g><text x="75" y="130" text-anchor="middle" font-family="Caveat, cursive" font-size="13" fill="#a86400">Cell power</text></svg></div>
         <div class="body">
           <div class="tagrow"><span class="tag m">03 · Cell damage</span><span class="tag c">Lab studies</span></div>
           <h4>They jam your cells</h4>
@@ -1353,7 +1409,7 @@ footer .wrap{position:relative}
         </div>
       </article>
       <article class="mcard panel">
-        <div class="ico"><svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="44" fill="none" stroke="#cfd9e2" stroke-width="10"/><path d="M75 31 A44 44 0 1 1 31 75" fill="none" stroke="#8a3ffc" stroke-width="10" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" values="0 75 75;360 75 75" dur="4s" repeatCount="indefinite"/></path><text x="75" y="80" text-anchor="middle" font-family="Geist Mono,monospace" font-size="11" fill="#8a3ffc" letter-spacing="1">ON</text></svg></div>
+        <div class="ico"><svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="44" fill="none" stroke="#cfd9e2" stroke-width="10"/><path d="M75 31 A44 44 0 1 1 31 75" fill="none" stroke="#8a3ffc" stroke-width="10" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" values="0 75 75;360 75 75" dur="4s" repeatCount="indefinite"/></path><text x="75" y="80" text-anchor="middle" font-family="Caveat, cursive" font-size="16" fill="#8a3ffc">On</text></svg></div>
         <div class="body">
           <div class="tagrow"><span class="tag m">04 · Stuck immune system</span><span class="tag a">Debated</span></div>
           <h4>The alarm won't turn off</h4>
@@ -1389,7 +1445,7 @@ footer .wrap{position:relative}
     <div class="ch-head">
       <div class="ch-num">02</div>
       <div>
-        <p class="mono">Chapter 02 · Where it hides</p>
+        <p class="mono">part 2: where it hides</p>
         <h2>Water in. <em class="s">Mold</em> follows.</h2>
         <p class="lead">Mold spores are already in every home. They only grow where there's water. Find the water and you find the mold, often behind a wall, under a floor or inside the AC where you can't see it.</p>
       </div>
@@ -1496,7 +1552,7 @@ footer .wrap{position:relative}
     <div class="ch-head">
       <div class="ch-num">03</div>
       <div>
-        <p class="mono">Chapter 03 · Solutions</p>
+        <p class="mono">part 3: solutions</p>
         <h2>Kill it. Then <em class="s">neutralize</em> it.</h2>
         <p class="lead">Most mold cleanup stops at killing the mold. The problem is that dead mold and the toxins it made are still there, in the dust, the air and your vents. A real fix does three things: stops the water, removes the growth and breaks down the toxins left behind.</p>
       </div>
@@ -1514,8 +1570,8 @@ footer .wrap{position:relative}
             <g transform="translate(190 130)"><polygon points="-9,0 -4.5,-8 4.5,-8 9,0 4.5,8 -4.5,8" fill="#efe6ff" stroke="#8a3ffc" stroke-width="2"/><animateTransform attributeName="transform" type="translate" values="190 130;198 124;190 130" dur="2.8s" repeatCount="indefinite"/></g>
             <g transform="translate(290 60)"><polygon points="-9,0 -4.5,-8 4.5,-8 9,0 4.5,8 -4.5,8" fill="#efe6ff" stroke="#8a3ffc" stroke-width="2"/></g>
           </g>
-          <text x="112" y="150" text-anchor="middle" font-family="Geist Mono,monospace" font-size="10" fill="#5b6675" letter-spacing="1">MOLD: DEAD</text>
-          <text x="244" y="150" text-anchor="middle" font-family="Geist Mono,monospace" font-size="10" fill="#8a3ffc" letter-spacing="1">TOXINS: STILL HERE</text>
+          <text x="112" y="150" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#5b6675">Mold: dead</text>
+          <text x="244" y="150" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#8a3ffc">Toxins: still here</text>
         </svg>
         <h4>Dead mold is <em class="s">still toxic.</em></h4>
         <p>In a 2005 lab study, chlorine dioxide gas killed Stachybotrys colonies, but the dead mold still tested toxic. A second study found the gas alone didn't break down two trichothecene toxins, while chlorine dioxide dissolved in water did.</p>
@@ -1527,10 +1583,10 @@ footer .wrap{position:relative}
           <g fill="#17a35f" opacity=".5"><circle cx="40" cy="40" r="3"><animate attributeName="cx" values="20;140" dur="3s" repeatCount="indefinite"/></circle><circle cx="40" cy="80" r="2.4"><animate attributeName="cx" values="10;150" dur="2.6s" repeatCount="indefinite"/></circle><circle cx="40" cy="120" r="3"><animate attributeName="cx" values="20;140" dur="3.4s" repeatCount="indefinite"/></circle><circle cx="40" cy="60" r="2"><animate attributeName="cx" values="10;150" dur="2.2s" begin="-1s" repeatCount="indefinite"/></circle><circle cx="40" cy="100" r="2.6"><animate attributeName="cx" values="10;150" dur="2.9s" begin="-1.4s" repeatCount="indefinite"/></circle></g>
           <g transform="translate(170 84)">
             <g><polygon points="-14,0 -7,-12 7,-12 14,0 7,12 -7,12" fill="#efe6ff" stroke="#8a3ffc" stroke-width="2"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.35;.5;.9;1" dur="4s" repeatCount="indefinite"/></polygon></g>
-            <g fill="#17a35f" font-family="Geist Mono,monospace" font-size="10" text-anchor="middle"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.4;.55;.85;1" dur="4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;0 0;60 -26;60 -26;0 0" keyTimes="0;.4;.6;.9;1" dur="4s" repeatCount="indefinite"/><rect x="-16" y="-10" width="32" height="18" rx="5" fill="#e3f7ec" stroke="#17a35f"/><text y="3">NaCl</text></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.4;.55;.85;1" dur="4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;0 0;70 24;70 24;0 0" keyTimes="0;.4;.6;.9;1" dur="4s" repeatCount="indefinite"/><rect x="-16" y="-10" width="32" height="18" rx="5" fill="#e6f6fb" stroke="#0a9cc4"/><text y="3" fill="#0a9cc4">H₂O</text></g></g>
+            <g fill="#17a35f" font-family="Caveat, cursive" font-size="10" text-anchor="middle"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.4;.55;.85;1" dur="4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;0 0;60 -26;60 -26;0 0" keyTimes="0;.4;.6;.9;1" dur="4s" repeatCount="indefinite"/><rect x="-16" y="-10" width="32" height="18" rx="5" fill="#e3f7ec" stroke="#17a35f"/><text y="3">NaCl</text></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.4;.55;.85;1" dur="4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;0 0;70 24;70 24;0 0" keyTimes="0;.4;.6;.9;1" dur="4s" repeatCount="indefinite"/><rect x="-16" y="-10" width="32" height="18" rx="5" fill="#e6f6fb" stroke="#0a9cc4"/><text y="3" fill="#0a9cc4">H₂O</text></g></g>
           </g>
-          <text x="70" y="150" text-anchor="middle" font-family="Geist Mono,monospace" font-size="10" fill="#17a35f" letter-spacing="1">HOCl MIST</text>
-          <text x="250" y="150" text-anchor="middle" font-family="Geist Mono,monospace" font-size="10" fill="#17a35f" letter-spacing="1">BROKEN DOWN</text>
+          <text x="70" y="150" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#17a35f">HOCl MIST</text>
+          <text x="250" y="150" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#17a35f">Broken down</text>
         </svg>
         <h4>So clean the <em class="s">toxins</em> too.</h4>
         <p>Mycotoxins are sticky and don't wash off with plain water. That's why newer protocols add a cleaner that breaks them down, like hypochlorous acid (HOCl), and a careful wipe-down of every surface where dust settles.</p>
@@ -1563,7 +1619,7 @@ footer .wrap{position:relative}
             <circle r="2"><animateMotion dur="3.6s" begin="-.5s" repeatCount="indefinite" path="M65 96 C 160 100, 260 130, 400 140"/><animate attributeName="opacity" values="1;0" dur="3.6s" begin="-.5s" repeatCount="indefinite"/></circle>
           </g>
           <g fill="none" stroke="#17a35f" stroke-opacity=".25" stroke-width="18" stroke-linecap="round"><path d="M100 70 C 180 40, 280 50, 380 70"/><path d="M110 110 C 200 100, 290 110, 390 120"/></g>
-          <text x="65" y="168" text-anchor="middle" font-family="Geist Mono,monospace" font-size="9" fill="#17a35f" letter-spacing="1">FOGGER</text>
+          <text x="65" y="168" text-anchor="middle" font-family="Caveat, cursive" font-size="13" fill="#17a35f">Fogger</text>
         </svg></div>
         <h4>Hypochlorous acid<small>HOCl · fog, spray, wipe</small></h4>
         <div class="evrow"><span class="ev"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Lab tests · company-funded data</div>
@@ -1580,11 +1636,11 @@ footer .wrap{position:relative}
           <rect x="20" y="20" width="380" height="140" fill="none" stroke="#5b6675" stroke-width="3"/>
           <rect x="300" y="20" width="16" height="140" fill="#eee7da" stroke="#5b6675" stroke-width="1.6"/>
           <g fill="#c9c21f" fill-opacity=".14"><circle cx="160" cy="110" r="20"><animate attributeName="r" values="20;170" dur="5s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".3;0" dur="5s" repeatCount="indefinite"/></circle><circle cx="160" cy="110" r="20"><animate attributeName="r" values="20;170" dur="5s" begin="-2.5s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".3;0" dur="5s" begin="-2.5s" repeatCount="indefinite"/></circle></g>
-          <rect x="140" y="120" width="40" height="40" rx="4" fill="#fff" stroke="#9a8f12" stroke-width="2"/><text x="160" y="144" text-anchor="middle" font-family="Geist Mono,monospace" font-size="9" fill="#9a8f12">ClO₂</text>
+          <rect x="140" y="120" width="40" height="40" rx="4" fill="#fff" stroke="#9a8f12" stroke-width="2"/><text x="160" y="144" text-anchor="middle" font-family="Caveat, cursive" font-size="13" fill="#9a8f12">ClO₂</text>
           <g fill="#9a8f12"><circle r="2.4"><animateMotion dur="4s" repeatCount="indefinite" path="M160 120 C 220 80, 290 70, 308 90"/></circle><circle r="2"><animateMotion dur="4.4s" begin="-2s" repeatCount="indefinite" path="M160 120 C 240 110, 290 120, 308 130"/></circle></g>
           <g fill="#2f6b4a"><circle cx="306" cy="60" r="3"><animate attributeName="opacity" values="1;1;.15" dur="4s" repeatCount="indefinite"/></circle><circle cx="310" cy="104" r="3"><animate attributeName="opacity" values="1;1;.15" dur="4s" begin="-1s" repeatCount="indefinite"/></circle><circle cx="305" cy="138" r="3"><animate attributeName="opacity" values="1;1;.15" dur="4s" begin="-2s" repeatCount="indefinite"/></circle></g>
-          <text x="330" y="40" font-family="Geist Mono,monospace" font-size="9" fill="#5b6675" letter-spacing="1">WALL</text>
-          <text x="36" y="40" font-family="Geist Mono,monospace" font-size="9" fill="#d93434" letter-spacing="1">SEALED · NOBODY INSIDE</text>
+          <text x="330" y="40" font-family="Caveat, cursive" font-size="13" fill="#5b6675">Wall</text>
+          <text x="36" y="40" font-family="Caveat, cursive" font-size="13" fill="#d93434">Sealed, nobody inside</text>
         </svg></div>
         <h4>Chlorine dioxide gas<small>ClO₂ · “gas bombs” &amp; pouches</small></h4>
         <div class="evrow"><span class="ev"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Strong at killing mold · weak on toxins as a gas</div>
@@ -1643,7 +1699,7 @@ footer .wrap{position:relative}
     <div class="ch-head">
       <div class="ch-num">04</div>
       <div>
-        <p class="mono">Chapter 04 · Your body</p>
+        <p class="mono">part 4: your body</p>
         <h2>Get out. Then <em class="s">clear it out.</em></h2>
         <p class="lead">Your body can clear mycotoxins on its own, mostly through the liver, the gut and the kidneys. The first and biggest step is to stop breathing them in. No supplement can keep up with a home that's still moldy.</p>
       </div>
@@ -1687,7 +1743,7 @@ footer .wrap{position:relative}
 <div class="creep" aria-hidden="true"></div>
 <section class="reset" id="reset">
   <div class="wrap">
-    <span class="eyebrow mono"><b>THE PLAN</b> Holistic approach</span>
+    <span class="note-h">ok, here's the plan</span>
     <h2 style="margin-top:18px">Find it. Kill it. <em class="s">Breathe again.</em></h2>
     <div class="steps3">
       <div><p class="mono">Step 1</p><h4>Fix the home</h4><p>Find the water, fix it and remove what's rotten. Then deep-clean the dust, where the toxins live.</p></div>
@@ -1706,6 +1762,7 @@ footer .wrap{position:relative}
   <canvas id="footcolony" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="foot-big">It's <em class="s">the</em> <span class="m">mold.</span></div>
+    <p class="note-h foot-note">Trust how you feel. If your home is making you sick, it's worth a look.</p>
     <div class="foot-cols">
       <p>itsthemold.com teaches how mold and mycotoxins affect your body and brain, where mold hides in a home, and how to clear it out. Holistic views are labeled. Remediation approach referenced from Superstratum Labs' published protocol.</p>
       <p>Not medical advice. Nothing here diagnoses, treats or cures any condition. Talk to a qualified health professional before starting a detox or changing medications, and a qualified remediation professional for large mold problems.</p>
