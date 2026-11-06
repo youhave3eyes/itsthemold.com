@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Mold is everywhere. Learn how mold and mycotoxins make you sick, where mold hides in your home, and how to clear it out with HOCl, chlorine dioxide and a full reset.">
+<meta name="description" content="Is it mold? Mold makes invisible poisons called mycotoxins that can affect your brain, breathing, energy and skin. Learn how and mycotoxins make you sick, where mold hides in your home, and how to clear it out with HOCl, chlorine dioxide and a full reset.">
 <meta property="og:title" content="It's The Mold">
-<meta property="og:description" content="Mold is everywhere. Is it affecting you?">
+<meta property="og:description" content="Mold makes an invisible poison. Could it be affecting you?">
 <meta property="og:url" content="https://itsthemold.com/">
 <meta property="og:image" content="https://itsthemold.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -765,6 +765,82 @@ footer{position:relative;overflow:hidden;background:radial-gradient(70% 120% at 
 footer .wrap{position:relative}
 
 @media (prefers-reduced-motion:reduce){.creep,.ch-num::before{animation:none}}
+/* ===== hero + invisible toxin section ===== */
+.top h1{max-width:none}
+.top-lead{margin-top:22px;max-width:44ch;font-size:clamp(1.12rem,1.9vw,1.4rem);line-height:1.45;color:var(--text2)}
+.top-lead b{color:var(--magenta);font-weight:600}
+.top-cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.btn-mold,.btn-ghost{display:inline-flex;align-items:center;padding:14px 22px;border-radius:99px;font-weight:600;text-decoration:none;font-size:1rem;transition:transform .2s,box-shadow .2s}
+.btn-mold{background:var(--mold);color:var(--void);box-shadow:0 0 30px rgba(166,217,79,.35)}
+.btn-ghost{border:1px solid var(--line-2);color:var(--ink);background:rgba(21,32,25,.7)}
+.btn-mold:hover,.btn-ghost:hover{transform:translateY(-2px)}
+.ticker{color:var(--ink)}
+#tick{color:var(--mold)}
+
+.inv{padding-block:clamp(56px,8vw,110px);background:radial-gradient(60% 50% at 80% 20%,rgba(192,132,252,.1),transparent 70%)}
+.inv-head{display:grid;gap:16px;justify-items:start;margin-bottom:clamp(28px,4vw,44px)}
+.inv-head h2{font-size:clamp(2.6rem,7.6vw,6rem);font-weight:700;font-variation-settings:"wdth" 80;line-height:.9;letter-spacing:-.04em;max-width:13ch}
+.inv-head h2 em.s{color:var(--magenta);text-shadow:0 0 34px rgba(192,132,252,.4)}
+.inv-head p{font-size:1.15rem;color:var(--text2);max-width:58ch}
+.inv-stage{padding:14px;display:grid;gap:12px}
+.inv-toggle{display:inline-flex;justify-self:start;padding:4px;border-radius:99px;border:1px solid var(--line-2);background:var(--deep)}
+.inv-toggle button{all:unset;cursor:pointer;padding:10px 18px;border-radius:99px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:.25s}
+.inv-toggle button[aria-selected="true"]{background:var(--magenta);color:var(--void)}
+.inv-toggle button:first-child[aria-selected="true"]{background:var(--ink)}
+.inv-toggle button:focus-visible{outline:2px solid var(--mold);outline-offset:2px}
+#room{width:100%;display:block;border-radius:16px;border:1px solid var(--line)}
+#room .toxins,#room .hits,#room .hit-labels{transition:opacity .7s}
+#room .clean-label{transition:opacity .7s;opacity:0}
+#room.see .toxins,#room.see .hits,#room.see .hit-labels{opacity:0}
+#room.see .clean-label{opacity:1}
+.inv-cap{font-size:1rem;color:var(--ink);padding:0 6px 6px;min-height:1.6em}
+.inv-cap b{color:var(--magenta)}
+.svgwrap{overflow-x:auto}
+
+.chain{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;counter-reset:c;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--panel)}
+.chain li{padding:22px 22px 24px;display:grid;gap:8px;align-content:start;position:relative}
+.chain li+li{border-left:1px solid var(--line)}
+.chain li+li::before{content:"→";position:absolute;left:-12px;top:30px;width:22px;height:22px;border-radius:50%;background:var(--deep);border:1px solid var(--line-2);display:grid;place-items:center;font-size:.75rem;color:var(--muted);z-index:1}
+.ci{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--k);box-shadow:0 0 18px color-mix(in srgb,var(--k) 30%,transparent)}
+.ci svg{width:24px;height:24px}
+.chain b{font-family:var(--f-display);font-size:1.2rem;font-weight:600}
+.chain p{font-size:.92rem;color:var(--text2)}
+.chain li:nth-child(3){background:linear-gradient(180deg,rgba(192,132,252,.1),transparent)}
+.chain li:nth-child(3) b{color:var(--magenta)}
+
+.scale{margin-top:18px;padding:26px;display:grid;gap:20px}
+.scale-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.scale-top h3{font-size:1.5rem;font-weight:600}
+.scale-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:end}
+.sz{display:grid;justify-items:center;text-align:center;gap:4px;padding:14px 8px;border-radius:16px}
+.sz i{display:block;width:var(--d);height:var(--d);border-radius:50%;background:var(--c,#bccbbd);box-shadow:0 0 18px var(--c,transparent);margin-bottom:10px}
+.sz:first-child i{width:100%;max-width:120px;height:6px;border-radius:3px;background:#8a7a5c;box-shadow:none;margin-bottom:24px}
+.sz b{font-size:1rem}
+.sz span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.sz em{font-style:normal;font-size:.82rem;color:var(--text2)}
+.sz.hot{background:linear-gradient(180deg,rgba(192,132,252,.12),transparent);border:1px solid rgba(192,132,252,.35)}
+.sz.hot b,.sz.hot span{color:var(--magenta)}
+.sz.hot i{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.8);opacity:.6}}
+.scale-note{font-size:.92rem;color:var(--text2);border-top:1px solid var(--line);padding-top:16px}
+
+.symgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.sg{padding:22px;display:grid;gap:14px;align-content:start;border-top:3px solid var(--k)!important}
+.sg-top{display:flex;align-items:center;gap:12px}
+.sg-ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:var(--k);background:color-mix(in srgb,var(--k) 14%,transparent)}
+.sg-ic svg{width:28px;height:28px}
+.sg h4{font-size:1.25rem;font-weight:600}
+.sg ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.sg li{font-size:.86rem;padding:6px 10px;border-radius:99px;border:1px solid color-mix(in srgb,var(--k) 40%,transparent);color:var(--ink)}
+.sym-note{margin-top:14px;font-size:.86rem;color:var(--muted);max-width:80ch}
+
+.inv .check{margin-top:clamp(36px,5vw,56px);max-width:none;padding:clamp(20px,3vw,32px);gap:18px;border-color:rgba(166,217,79,.3)}
+.check-head{display:grid;gap:8px}
+.check-head .ask{margin-top:0;font-size:clamp(2rem,4.6vw,3.4rem)}
+.qc button{font-size:.98rem;padding:11px 16px}
+
+@media (max-width:980px){.symgrid{grid-template-columns:1fr 1fr}.chain{grid-template-columns:1fr 1fr}.chain li:nth-child(3){border-left:0}.chain li:nth-child(n+3){border-top:1px solid var(--line)}.chain li:nth-child(3)::before{display:none}}
+@media (max-width:620px){.symgrid,.chain{grid-template-columns:1fr}.chain li+li{border-left:0;border-top:1px solid var(--line)}.chain li+li::before{left:22px;top:-12px;content:"↓"}.chain li:nth-child(3)::before{display:grid}.scale-row{grid-template-columns:1fr 1fr}#room{min-width:620px}.svgwrap{margin:0 -4px}}
 </style>
 </head>
 <body>
@@ -782,7 +858,7 @@ footer .wrap{position:relative}
       <path d="M14 18 A18 18 0 0 1 24 12.6" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.6" stroke-linecap="round"/>
       <text x="58" y="41" font-size="34" font-weight="800" letter-spacing="-1.2" fill="#e6f0e2">its<tspan font-family="Instrument Serif, Georgia, serif" font-style="italic" font-weight="400" fill="#a6d94f" font-size="38" dx="2" letter-spacing="0">the</tspan><tspan dx="2">mold</tspan></text>
     </svg></a>
-    <nav class="menu" id="menu" aria-label="Site"><ul id="menu-list"><li><a href="#top">Start</a></li><li><a href="#sick">Sick</a></li><li><a href="#brain">Brain</a></li><li><a href="#toxins">Toxins</a></li><li><a href="#hides">Where it hides</a></li><li><a href="#fix">Solutions</a></li><li><a href="#body">Your body</a></li></ul></nav>
+    <nav class="menu" id="menu" aria-label="Site"><ul id="menu-list"><li><a href="#top">Start</a></li><li><a href="#invisible">The toxin</a></li><li><a href="#sick">How it gets in</a></li><li><a href="#brain">Brain</a></li><li><a href="#toxins">Molds</a></li><li><a href="#hides">Where it hides</a></li><li><a href="#fix">Solutions</a></li><li><a href="#body">Your body</a></li></ul></nav>
   </div>
   <div class="progress" id="progress"></div>
 </header>
@@ -790,25 +866,161 @@ footer .wrap{position:relative}
 <section class="top" id="top">
   <canvas id="swarm" aria-hidden="true"></canvas>
   <div class="wrap top-in">
-    <span class="eyebrow mono"><b>SAMPLE 01</b> Spores are too small to see</span>
-    <h1>Mold is <em class="s">everywhere.</em></h1>
-    <p class="ticker">It's in <span id="tick">the air you breathe.</span></p>
-    <p class="ask">Is it affecting <em class="s">you?</em></p>
-    <div class="check panel" aria-labelledby="qc-h">
-      <p class="mono" id="qc-h">Quick check · tap what sounds like you</p>
+    <span class="eyebrow mono"><b>SAMPLE 01</b> You can't see it</span>
+    <h1>Is it <em class="s">mold?</em></h1>
+    <p class="ticker">That <span id="tick">brain fog that won't lift.</span></p>
+    <p class="top-lead">Mold makes an invisible poison called <b>mycotoxins</b>. You can't see it. You can't smell it. But it can be the reason you feel sick.</p>
+    <div class="top-cta">
+      <a class="btn-mold" href="#invisible">See what's really in the air ↓</a>
+      <a class="btn-ghost" href="#check">Take the 30-second check</a>
+    </div>
+  </div>
+</section>
+
+<div class="creep" aria-hidden="true"></div>
+<section class="inv" id="invisible">
+  <div class="wrap">
+    <div class="inv-head">
+      <span class="eyebrow mono"><b>THE HIDDEN PART</b> What mold leaves in the air</span>
+      <h2>Mold makes a poison <em class="s">you can't see.</em></h2>
+      <p>Mold is the fuzzy part you can see. Mycotoxins are the poisons it makes, and they are thousands of times smaller. They ride on dust into the air you breathe, in a room that looks perfectly clean.</p>
+    </div>
+
+    <div class="inv-stage panel">
+      <div class="inv-toggle" role="tablist" aria-label="Choose a view">
+        <button type="button" role="tab" id="v-see" aria-selected="false">What you see</button>
+        <button type="button" role="tab" id="v-real" aria-selected="true">What's really there</button>
+      </div>
+      <div class="svgwrap"><svg viewBox="0 0 900 420" role="img" aria-label="A room with mold on the wall. In the real view, invisible mycotoxins drift from the mold into a person and reach the brain, nose, lungs, gut and skin." id="room" class="is-real">
+        <defs>
+          <radialGradient id="rmglow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#c084fc" stop-opacity=".55"/><stop offset="1" stop-color="#c084fc" stop-opacity="0"/></radialGradient>
+          <g id="tx"><polygon points="-6,0 -3,-5.2 3,-5.2 6,0 3,5.2 -3,5.2" fill="#2a1c3d" stroke="#c084fc" stroke-width="1.6"/><circle r="1.8" fill="#c084fc"/></g>
+          <path id="fl1" d="M150 150 C 300 110, 450 220, 530 120"/>
+          <path id="fl2" d="M170 210 C 320 260, 470 120, 540 175"/>
+          <path id="fl3" d="M130 260 C 280 330, 480 280, 545 235"/>
+          <path id="fl4" d="M190 120 C 360 40, 520 90, 530 95"/>
+          <path id="fl5" d="M160 300 C 330 380, 500 330, 540 290"/>
+        </defs>
+        <!-- room -->
+        <rect x="0" y="0" width="900" height="420" fill="#121c16"/>
+        <rect x="0" y="0" width="300" height="420" fill="#17241c"/>
+        <path d="M0 360 H900 V420 H0z" fill="#0e1611"/><path d="M0 360 H900" stroke="#2c3f33" stroke-width="2"/>
+        <path d="M300 0 V360" stroke="#22322a" stroke-width="2"/>
+        <!-- window -->
+        <rect x="380" y="50" width="130" height="110" rx="4" fill="#1b2a22" stroke="#33493b" stroke-width="3"/><path d="M445 50 v110 M380 105 h130" stroke="#33493b" stroke-width="2"/>
+        <!-- water stain + mold patch -->
+        <path d="M40 40 q40 -10 80 10 q50 30 40 90 q-10 60 30 110 q30 40 -10 70 q-60 30 -110 -10 q-40 -40 -20 -110 q10 -60 -10 -160z" fill="#3a3320" opacity=".45"/>
+        <g filter="url(#fuzzs)">
+          <circle cx="110" cy="160" r="46" fill="#2c4a25"/><circle cx="80" cy="220" r="38" fill="#24391f"/><circle cx="150" cy="230" r="30" fill="#3a5e2c"/><circle cx="120" cy="290" r="26" fill="#22331d"/><circle cx="70" cy="130" r="22" fill="#4f8a3a"/><circle cx="160" cy="130" r="16" fill="#a6d94f" opacity=".7"/><circle cx="60" cy="280" r="14" fill="#a6d94f" opacity=".55"/><circle cx="170" cy="180" r="10" fill="#5cc8c2" opacity=".5"/>
+          <circle cx="104" cy="166" r="14" fill="#1b2a17"/><circle cx="86" cy="226" r="11" fill="#1b2a17"/><circle cx="150" cy="236" r="9" fill="#1b2a17"/>
+          <animateTransform attributeName="transform" type="scale" values="1;1.025;1" dur="5s" repeatCount="indefinite" additive="sum"/>
+        </g>
+        <text x="40" y="345" class="rl" font-family="Geist Mono,monospace" font-size="12" letter-spacing="1.5" fill="#a6d94f">MOLD · YOU CAN SEE THIS</text>
+        <g transform="translate(-110 0)">
+        <!-- person -->
+        <g id="person">
+          <circle cx="720" cy="92" r="34" fill="#1d2b23" stroke="#bccbbd" stroke-width="2.4"/>
+          <path d="M672 360 V200 q0 -60 48 -66 q48 6 48 66 V360" fill="#1d2b23" stroke="#bccbbd" stroke-width="2.4"/>
+          <path d="M672 210 q-30 40 -26 110 M768 210 q30 40 26 110" fill="none" stroke="#bccbbd" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+        <!-- hit points on person -->
+        <g class="hits">
+          <g><circle cx="720" cy="80" r="18" fill="url(#rmglow)"><animate attributeName="r" values="12;24;12" dur="2.2s" repeatCount="indefinite"/></circle><circle cx="720" cy="80" r="4" fill="#c084fc"/></g>
+          <g><circle cx="738" cy="104" r="14" fill="url(#rmglow)"><animate attributeName="r" values="10;18;10" dur="2s" begin="-.4s" repeatCount="indefinite"/></circle><circle cx="738" cy="104" r="3.4" fill="#c084fc"/></g>
+          <g><circle cx="706" cy="190" r="18" fill="url(#rmglow)"><animate attributeName="r" values="12;24;12" dur="2.4s" begin="-.8s" repeatCount="indefinite"/></circle><circle cx="706" cy="190" r="4" fill="#c084fc"/></g>
+          <g><circle cx="726" cy="262" r="16" fill="url(#rmglow)"><animate attributeName="r" values="10;22;10" dur="2.6s" begin="-1.2s" repeatCount="indefinite"/></circle><circle cx="726" cy="262" r="4" fill="#c084fc"/></g>
+          <g><circle cx="652" cy="290" r="14" fill="url(#rmglow)"><animate attributeName="r" values="8;18;8" dur="2.2s" begin="-1.6s" repeatCount="indefinite"/></circle><circle cx="652" cy="290" r="3.4" fill="#c084fc"/></g>
+        </g>
+        <g class="hit-labels" font-family="Geist Mono,monospace" font-size="11.5" letter-spacing="1.2" fill="#e6f0e2">
+          <text x="770" y="62">BRAIN FOG · HEADACHES</text>
+          <text x="782" y="110">STUFFY NOSE · SINUS</text>
+          <text x="782" y="194">COUGH · TIGHT CHEST</text>
+          <text x="782" y="266">NAUSEA · FATIGUE</text>
+          <text x="632" y="294" text-anchor="end">RASHES · ACHES</text>
+        </g>
+        </g>
+        <!-- toxins in the air -->
+        <g class="toxins">
+          <use href="#tx"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#fl1"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="5s" begin="-2.5s" repeatCount="indefinite"><mpath href="#fl1"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="5.6s" begin="-1s" repeatCount="indefinite"><mpath href="#fl2"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="5.6s" begin="-3.8s" repeatCount="indefinite"><mpath href="#fl2"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="6s" begin="-2s" repeatCount="indefinite"><mpath href="#fl3"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="6s" begin="-4.6s" repeatCount="indefinite"><mpath href="#fl3"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="5.2s" begin="-.5s" repeatCount="indefinite"><mpath href="#fl4"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="5.2s" begin="-3s" repeatCount="indefinite"><mpath href="#fl4"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="6.4s" begin="-1.4s" repeatCount="indefinite"><mpath href="#fl5"/></animateMotion></use>
+          <use href="#tx"><animateMotion dur="6.4s" begin="-4.2s" repeatCount="indefinite"><mpath href="#fl5"/></animateMotion></use>
+          <g fill="#c084fc" opacity=".55">
+            <circle r="1.6"><animateMotion dur="4.2s" repeatCount="indefinite"><mpath href="#fl2"/></animateMotion></circle>
+            <circle r="1.4"><animateMotion dur="3.8s" begin="-1.6s" repeatCount="indefinite"><mpath href="#fl1"/></animateMotion></circle>
+            <circle r="1.6"><animateMotion dur="4.6s" begin="-2.2s" repeatCount="indefinite"><mpath href="#fl3"/></animateMotion></circle>
+            <circle r="1.3"><animateMotion dur="4s" begin="-3s" repeatCount="indefinite"><mpath href="#fl4"/></animateMotion></circle>
+            <circle r="1.5"><animateMotion dur="4.4s" begin="-.8s" repeatCount="indefinite"><mpath href="#fl5"/></animateMotion></circle>
+          </g>
+          <text x="330" y="398" text-anchor="middle" font-family="Geist Mono,monospace" font-size="12" letter-spacing="1.5" fill="#c084fc">MYCOTOXINS · INVISIBLE · NO SMELL</text>
+        </g>
+        <g class="clean-label"><text x="480" y="250" text-anchor="middle" font-family="Geist Mono,monospace" font-size="13" letter-spacing="1.6" fill="#8fa392">THE AIR LOOKS CLEAN</text></g>
+      </svg></div>
+      <p class="inv-cap" id="inv-cap">Toxins ride on dust from the mold to you. They reach your brain, nose, lungs, gut and skin.</p>
+    </div>
+
+    <ol class="chain">
+      <li><span class="ci" style="--k:var(--amber)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 q-7 9 -7 13 a7 7 0 0 0 14 0 q0 -4 -7 -13z" fill="none" stroke="#e3b341" stroke-width="2"/></svg></span><b>Water gets in</b><p>A leak, a flood, high humidity or a sweaty window. Mold needs 24–48 hours to start.</p></li>
+      <li><span class="ci" style="--k:var(--mold)"><svg viewBox="0 0 24 24" aria-hidden="true"><g filter="url(#fuzzs)"><circle cx="12" cy="12" r="7" fill="#a6d94f"/><circle cx="12" cy="12" r="3" fill="#3a5e2c"/></g></svg></span><b>Mold grows</b><p>Often where you can't see it: behind walls, under floors, inside the AC.</p></li>
+      <li><span class="ci" style="--k:var(--magenta)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="4,12 8,5 16,5 20,12 16,19 8,19" fill="none" stroke="#c084fc" stroke-width="2"/><circle cx="12" cy="12" r="2.4" fill="#c084fc"/></svg></span><b>It releases mycotoxins</b><p>Invisible poisons with no smell. They stick to dust and float through the whole home.</p></li>
+      <li><span class="ci" style="--k:var(--ink)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="3.4" fill="none" stroke="#e6f0e2" stroke-width="2"/><path d="M5 22 v-6 q0 -6 7 -6 q7 0 7 6 v6" fill="none" stroke="#e6f0e2" stroke-width="2"/></svg></span><b>You breathe them in</b><p>Every day you're home. Your body reacts, and it can look like a lot of other problems.</p></li>
+    </ol>
+
+    <div class="scale panel">
+      <div class="scale-top"><h3>How small is a mycotoxin?</h3><span class="mono muted">Each step is about 10× smaller</span></div>
+      <div class="scale-row">
+        <div class="sz"><i style="--d:96px"></i><b>Human hair</b><span>~70 µm wide</span><em>You can see it</em></div>
+        <div class="sz"><i style="--d:40px;--c:var(--moss)"></i><b>Mold spore</b><span>2–10 µm</span><em>Need a microscope</em></div>
+        <div class="sz"><i style="--d:14px;--c:var(--cyan)"></i><b>Mold fragment</b><span>under 1 µm</span><em>Passes most filters</em></div>
+        <div class="sz hot"><i style="--d:4px;--c:var(--magenta)"></i><b>Mycotoxin</b><span>about 1 nanometer</span><em>A single molecule</em></div>
+      </div>
+      <p class="scale-note">The musty smell comes from gases the mold gives off, not from the toxins. Mycotoxins have no smell, so a home can smell fine and still have them.</p>
+    </div>
+
+    <div class="sub-h"><h3>Mycotoxins can show up as</h3><span class="mono">Every part of you</span></div>
+    <div class="symgrid">
+      <article class="sg panel" style="--k:var(--magenta)">
+        <div class="sg-top"><span class="sg-ic"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6 c-8 0 -13 5 -13 11 c0 4 2 6 2 9 c0 4 4 7 8 7 h6 c4 0 8 -3 8 -7 c0 -3 2 -5 2 -9 c0 -6 -5 -11 -13 -11z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M20 8 v24 M13 15 q4 2 7 0 M20 20 q4 2 7 0" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><h4>Brain &amp; mood</h4></div>
+        <ul><li>Brain fog</li><li>Headaches</li><li>Trouble focusing</li><li>Memory slips</li><li>Anxiety or low mood</li><li>Dizziness</li></ul>
+      </article>
+      <article class="sg panel" style="--k:var(--cyan)">
+        <div class="sg-top"><span class="sg-ic"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6 v12 M20 18 q-4 2 -8 6 q-5 6 -4 10 q2 2 6 0 q4 -3 6 -10 M20 18 q4 2 8 6 q5 6 4 10 q-2 2 -6 0 q-4 -3 -6 -10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span><h4>Breathing</h4></div>
+        <ul><li>Stuffy nose that won't quit</li><li>Sinus pressure</li><li>Cough or wheeze</li><li>Asthma flares</li><li>Sore throat</li><li>Itchy, watery eyes</li></ul>
+      </article>
+      <article class="sg panel" style="--k:var(--amber)">
+        <div class="sg-top"><span class="sg-ic"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="13" width="22" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="29" y="17" width="4" height="6" rx="1" fill="currentColor"/><rect x="10" y="16" width="5" height="8" rx="1" fill="currentColor"/></svg></span><h4>Energy &amp; sleep</h4></div>
+        <ul><li>Tired no matter how much you sleep</li><li>Poor sleep</li><li>Weakness</li><li>Feeling “off” at home</li><li>Better when you travel</li></ul>
+      </article>
+      <article class="sg panel" style="--k:var(--mold)">
+        <div class="sg-top"><span class="sg-ic"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="9" r="4" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 36 v-12 q0 -9 8 -9 q8 0 8 9 v12" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17" cy="24" r="1.6" fill="currentColor"/><circle cx="23" cy="28" r="1.6" fill="currentColor"/></svg></span><h4>Body &amp; skin</h4></div>
+        <ul><li>Muscle or joint aches</li><li>Rashes and itchy skin</li><li>Nausea or belly upset</li><li>Sensitive to smells and chemicals</li><li>Numbness or tingling</li></ul>
+      </article>
+    </div>
+    <p class="sym-note">The link between damp, moldy homes and breathing problems is well proven. The other symptoms are commonly reported by people living in water-damaged buildings and are still being studied. Many other things can cause them too, so talk to a doctor.</p>
+
+    <div class="check panel" id="check" aria-labelledby="qc-h">
+      <div class="check-head"><p class="ask">Could mold be affecting <em class="s">you?</em></p><p class="mono" id="qc-h">Tap everything that sounds like you</p></div>
       <div class="qc" id="qc">
         <button type="button" aria-pressed="false">Stuffy nose that won't quit</button>
         <button type="button" aria-pressed="false">Brain fog</button>
         <button type="button" aria-pressed="false">Headaches</button>
         <button type="button" aria-pressed="false">Tired no matter what</button>
-        <button type="button" aria-pressed="false">Musty smell at home</button>
-        <button type="button" aria-pressed="false">Feel better when you travel</button>
         <button type="button" aria-pressed="false">Cough or wheeze</button>
+        <button type="button" aria-pressed="false">Achy or itchy</button>
+        <button type="button" aria-pressed="false">Musty smell at home</button>
         <button type="button" aria-pressed="false">Water leak in the past</button>
+        <button type="button" aria-pressed="false">Feel better when you travel</button>
+        <button type="button" aria-pressed="false">Others at home feel it too</button>
       </div>
       <div class="qc-out">
         <p id="qc-msg"><b id="qc-n">0</b> <span>Tap any that fit.</span></p>
-        <div class="qc-cta"><a href="#sick">See how it makes you sick ↓</a><a href="#fix" class="hot">Jump to solutions →</a></div>
+        <div class="qc-cta"><a href="#sick">See how it gets in ↓</a><a href="#hides">Find where it hides</a><a href="#fix" class="hot">Get rid of it →</a></div>
       </div>
     </div>
   </div>
@@ -818,9 +1030,9 @@ footer .wrap{position:relative}
 <section class="sick" id="sick">
   <div class="wrap">
     <div class="sick-head">
-      <span class="eyebrow mono"><b>SAMPLE 02</b> What happens next</span>
+      <span class="eyebrow mono"><b>SAMPLE 02</b> How it gets in</span>
       <h2>Mold makes you <em class="s">sick.</em></h2>
-      <p>Here's how it gets you, in five moves. Tap one to see where it happens.</p>
+      <p>Here's the path mycotoxins and spores take through your body, in five moves. Tap one to see where it happens.</p>
     </div>
     <div class="sick-grid">
       <div class="body-fig panel">
@@ -1618,13 +1830,24 @@ function growMold(c,host,opt){
 (()=>{
   growMold($('#swarm'),$('.top'));
   growMold($('#footcolony'),$('footer'),{max:5,seed:4,bg:null,interact:false,spores:false});
-  const words=['the air you breathe.','the wall behind your shower.','the cabinet under your sink.','your AC vents.','the basement carpet.','that “old house” smell.','your lungs. Right now?'];
+  const words=['brain fog that won\'t lift.','stuffy nose that never clears.','headache every afternoon.','tired that sleep won\'t fix.','cough that hangs on.','feeling better when you leave home.'];
   let wi=0;const tk=$('#tick');
   if(!REDUCE)setInterval(()=>{tk.classList.add('out');setTimeout(()=>{wi=(wi+1)%words.length;tk.textContent=words[wi];tk.classList.remove('out')},350)},2200);
   const btns=$$('#qc button'),n=$('#qc-n'),msg=$('#qc-msg span');
   btns.forEach(b=>b.addEventListener('click',()=>{b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');
     const k=btns.filter(z=>z.getAttribute('aria-pressed')==='true').length;n.textContent=k;
-    msg.textContent=k===0?'Tap any that fit.':k<3?'Worth a closer look. Keep scrolling.':'Your home may be trying to tell you something.';}));
+    msg.textContent=k===0?'Tap any that fit.':k<3?'Could be mold. Worth a closer look at your home.':k<5?'Strong signs. Mold could be affecting you. Start looking for water and mold.':'Many signs point to mold. Check your home and talk to a doctor.';}));
+})();
+
+
+/* ================= WHAT YOU SEE / WHAT'S REALLY THERE ================= */
+(()=>{
+  const room=$('#room'),bs=$('#v-see'),br=$('#v-real'),cap=$('#inv-cap');let auto=true,real=true,tm;
+  const caps={see:'Looks like a normal room. Just a stain on the wall.',real:'Toxins ride on dust from the mold to you. They reach your brain, nose, lungs, gut and skin.'};
+  function set(r){real=r;room.classList.toggle('see',!r);room.classList.toggle('is-real',r);bs.setAttribute('aria-selected',!r);br.setAttribute('aria-selected',r);cap.innerHTML=r?'<b>What\'s really there:</b> '+caps.real:'<b>What you see:</b> '+caps.see}
+  bs.addEventListener('click',()=>{auto=false;set(false)});br.addEventListener('click',()=>{auto=false;set(true)});
+  set(true);
+  if(!REDUCE){let vis=false;onScreen(room,v=>vis=v);tm=setInterval(()=>{if(auto&&vis)set(!real)},4200)}
 })();
 
 /* ================= HOW IT MAKES YOU SICK ================= */
